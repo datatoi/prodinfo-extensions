@@ -75,3 +75,12 @@ with stable routine part labels and exact code/config/run/attempt refs. The host
 command/queue/worker/model/connector activity through one permission-aware query surface, while
 keeping domain events, audit receipts and diagnostic/trace retention distinct. See the canonical
 [telemetry proposal](telemetry-draft.md); no logging SDK or query API is released yet.
+
+## UI-equivalent operator automation
+
+The core operation model supports both UI and a delegated operator console. Meaningful UI actions
+must not hide business mutations outside typed core operations. Routine/task/connection state,
+validation/preview, availability/reason and recovery metadata are machine-readable. A user may
+delegate configure/launch/inspect/correct/relaunch across a workspace/project/task, while credential
+entry/authority changes remain protected. Guest packages receive only their effective narrower
+capabilities. See [contract draft](contract-draft.md); no automation schema is executable yet.

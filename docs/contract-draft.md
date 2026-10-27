@@ -39,7 +39,9 @@ interface OperationDescription {
   outputSchema: Schema;
   effect: Effect;
   requiredCapabilities: string[];
-  // Declared preconditions/scopes/errors need structured definitions before release.
+  // Host policy can narrow this declaration; it is not an execution grant.
+  automation?: { delegable: boolean; protectedReason?: string };
+  // Preconditions/availability/preview/recovery need structured definitions before release.
 }
 
 interface ActionDescription {
@@ -92,6 +94,11 @@ write as read. An accepted reply proves durable admission, not external delivery
 | Validation/version | Unknown operations/versions, malformed or excessive input and unsupported schemas fail clearly |
 | Replay | Same request ID and effective input/version returns the prior result/handle; changed content conflicts |
 | Disclosure | Read is data access; catalogs and results are filtered by effective actor/package/workspace scope |
+| Operational parity | Meaningful UI actions have typed core operations; console delegation can execute them under the same domain rules |
+| Transparent entities | Describe tasks/routines/connections/config/results with capabilities, schemas, validation, availability reasons and recovery |
+| Delegation | Grant a bounded workspace/project/task scope once; inside-scope actions need no manual click per save/run |
+| Protected actions | Credential/authority interactions are explicit host-policy exceptions; caller metadata cannot self-authorize |
+| Correct and relaunch | Unchanged retries/resume use receipts/steps; changed code/input/config creates a new pinned run with lineage |
 | Configuration | Config instance/revision is host-owned; secrets are opaque refs; edits stale prior check results |
 | GUI actions | Host renders declarations; explicit action invocation performs work; render/save does not call a provider |
 | Long work | Submission returns a job; job/step/attempt pins survive client/VM lifetime and host restart |
@@ -149,3 +156,18 @@ revision fencing on reconnect. No multi-master DB synchronization is promised by
 Use host-bound context and standard trace/span conventions with package/config/run/attempt/step
 identity. Retained activity and configuration queries are scoped; secrets remain opaque. A central
 query surface does not equate diagnostics with transaction/audit receipts or event-trigger authority.
+
+## Operator console versus guest authority
+
+The application console acts for an authenticated user and should support almost all ordinary UI
+business/configuration actions: create/configure, validate/test, launch, inspect results, correct,
+resume/retry/relaunch, publish/install/activate and schedule or deliver when delegated. A downloaded
+routine receives a narrower guest projection; near UI parity does not give every package operator
+rights or expose private administration automatically. Both call the same validated domain service.
+
+Metadata must make schemas/effects, effective scope/preconditions, availability/denial reason,
+validation/preview and recovery discoverable. Protected exceptions have an explicit policy/reason.
+Operation metadata proposes requirements; host policy/grants decide actual execution. Raw secrets
+and the AI expanding its own authority are not ordinary delegated operations. The host may allow
+broad task/workspace automation without confirmation for each already authorized edit/test/run;
+separate activation/apply/delivery outcomes do not imply blanket human-only execution.

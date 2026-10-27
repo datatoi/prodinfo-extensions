@@ -15,6 +15,8 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
 - [ ] Implement minimal strict schemas, generated author types and valid/invalid synthetic fixtures.
   Separate core metadata/public guest projection from private administration; do not publish a
   speculative complete SDK before the operations exist.
+  Describe operation automation/effect/precondition/availability/validation/recovery so delegated
+  console and manual calls can be tested for parity without broadening guest package authority.
 - [ ] Mock host and CLI/test example for config, action, durable job, request replay, denied scope,
   malformed schema and late cancellation cases; no private checkout or real provider required.
 - [ ] Validate against the first real headless core; keep package/config/activation/run identity and
@@ -40,6 +42,8 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
   as implemented by core. Configuration GUI/AI views use the same contract, not guest UI scripts.
 - [ ] SDK diagnostics/examples supporting predefined routine fork → patch → type/schema/fixture/
   sample test → compare → explicit activation, retaining version/grant/cost/side-effect boundaries.
+  Exercise configure/launch/validate/correct/resume/relaunch within a bounded task grant, including
+  protected actions and unchanged-retry versus new-version-run semantics; no manual save per step.
 - [ ] Provide reusable CSV enrichment/review/export and competitor discovery/approved-watchlist/
   monitoring examples; failed checks preserve last valid observations, no automatic repricing.
 

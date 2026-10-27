@@ -54,3 +54,13 @@ registry, tags and routine parts. [Telemetry draft](telemetry-draft.md) is the c
 proposal: OpenTelemetry-style context, host-stamped identities, stable step/part/source/code/config
 refs and bounded structured messages/query coverage. Core facts/audit receipts and routine claims
 are distinct; log content is not authority. No executable logger/query API or dependency is released.
+
+## UI/AI operational parity refinement
+
+User requests near UI parity for console management: configure/create/manage entities, launch,
+inspect validation/results, correct and relaunch. Contract draft now proposes automation metadata,
+transparent preconditions/availability/recovery and bounded task-level delegation. No confirmation
+for every already-granted operation; distinct activate/apply/deliver outcomes may be delegated.
+Credential entry/authority expansion remain explicit exceptions. Operator-console authority is not
+inherited by downloaded routines; public guest projection stays narrower. No executable schema,
+method/version release, runtime implementation or test/build is introduced by this draft.

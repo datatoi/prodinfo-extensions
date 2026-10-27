@@ -23,7 +23,9 @@ conformance agree; draft names in discussions are not supported wire contracts.
 
 Trusted application implementation, UI/admin-only operations, database layout/migration internals,
 policy evaluation and credential material. Public contracts describe authorization requirements
-and error behavior without granting access. Modified SDK code cannot bypass host enforcement.
+and error behavior without granting access. Modified SDK code cannot bypass host enforcement. The operator console may use a broader private
+admin catalog under that user's delegation; public guest scope stays separate. Neither surface
+needs a parallel business implementation or a generic bypass executor.
 No shared business database with a destination or another application is part of the SDK.
 
 Official destination-specific implementation/config profiles/tests belong in public connector packages.

@@ -1,6 +1,7 @@
 # Public extension architecture
 
-Design target; no executable protocol or SDK is released yet. See [contract scope](contract-scope.md)
+Design target with a first experimental [command subset](../packages/contracts/README.md);
+no stable SDK or package-registry release. See [contract scope](contract-scope.md)
 and [compatibility](compatibility.md) before implementing or naming public API fields.
 
 ## Package roles
@@ -83,4 +84,5 @@ must not hide business mutations outside typed core operations. Routine/task/con
 validation/preview, availability/reason and recovery metadata are machine-readable. A user may
 delegate configure/launch/inspect/correct/relaunch across a workspace/project/task, while credential
 entry/authority changes remain protected. Guest packages receive only their effective narrower
-capabilities. See [contract draft](contract-draft.md); no automation schema is executable yet.
+capabilities. See [contract draft](contract-draft.md); the experimental operation schema currently
+implements only a delegability flag, not the complete automation/availability/recovery contract.

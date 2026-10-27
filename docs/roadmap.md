@@ -11,9 +11,15 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
 - [x] Review lifecycle/failure gaps and record conformance requirements for authority changes,
   package dependencies/removal, timers/events, effect recovery and consumer-specific exports.
   This is design review only, not executable compatibility or a completed runtime milestone.
-- [ ] Review the smallest contract boundary before assigning executable protocol/package versions.
+- [x] Start the authorized smallest command boundary as 0.1.0-alpha.1 source/packed artifacts;
+  no stable protocol, SDK publication or complete package contract is implied.
 
 ## E1 — executable contract and core conformance
+
+- [x] E1a: original read/configure operation + invocation/completed-result/error schemas, bounded
+  JSON, generated declarations/JSON Schema and synthetic valid/forged fixtures. Four local tests,
+  typecheck/build/schema drift checks; public-only three-OS CI configured, results tracked separately.
+  The private host consumes a packed pinned artifact and exercises this subset; E1 stays open below.
 
 - [ ] Implement minimal strict schemas, generated author types and valid/invalid synthetic fixtures.
   Separate core metadata/public guest projection from private administration; do not publish a

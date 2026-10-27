@@ -4,9 +4,12 @@ Public home for the ProdInfo extension contracts, TypeScript SDK, official routi
 connectors. Build configurable integrations and workflows against a documented host capability API.
 The Workbench application is private; extension development must not require its source.
 
-**Status:** documentation bootstrap, 27 October 2026. There is no released SDK, executable schema,
-connector implementation or package-registry release yet. Layouts below are targets, not install
-commands or compatibility promises.
+**Status:** first experimental command contract implemented, 27 October 2026.
+[@prodinfo/extension-contracts](packages/contracts/README.md) `0.1.0-alpha.1` has strict schemas,
+generated types/JSON Schema and synthetic tests. No stable SDK, connector or npm release yet.
+
+For development: Node 24.x, `pnpm install --frozen-lockfile --ignore-scripts`, then `pnpm check`.
+`pnpm generate` updates schema artifacts deliberately. Public checks require no private checkout.
 
 ## Start here
 

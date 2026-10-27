@@ -1,8 +1,10 @@
 # Extension and core boundary — contract draft for review
 
-Draft 0, 27 October 2026. A review proposal, not an executable schema, published SDK or stable wire
-protocol. Agree the minimal contract before implementing the headless core. TypeScript sketches
-below are illustrative; executable schemas will become canonical before deriving SDK/host types.
+Draft 0, 27 October 2026. Broader review proposal, not a published SDK or stable wire protocol.
+The first [executable subset](../packages/contracts/README.md), `0.1.0-alpha.1`, covers read/configure
+operations, invocations and completed results/errors. Its source owns those actual shapes/limits.
+Package/action/job/state/event sketches below remain illustrative and unimplemented; in particular,
+the accepted-job reply and broader effect/recovery variants below are not in the first subset.
 HTTP paths, operation IDs, package names and release versions are intentionally not fixed here.
 
 ## Contract layers

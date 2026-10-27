@@ -1,79 +1,58 @@
 # Extensions current context
 
-Updated: 2026-10-27. Single starting handoff. Task status lives in [roadmap.md](roadmap.md).
+Updated: 2026-10-27. Single starting handoff; [roadmap](roadmap.md) is the sole task checklist.
 
-New public datatoi/prodinfo-extensions repository: documentation/hygiene bootstrap only. No executable
-contracts/SDK/connector code, package publication, runtime compatibility proof or live-provider
-acceptance. Default branch: main. New original content is MIT licensed; no legacy source was copied.
+## Implemented first slice
 
-The private application implements policy and execution; this repository owns public schemas/types,
-SDK/helpers, mock/conformance tooling, official routines, destination adapters and synthetic examples.
-Public authors must not need private source, credentials or a specific sibling directory layout.
-No third contracts repository is planned. See [contract scope](contract-scope.md).
+Public datatoi/prodinfo-extensions now contains the experimental source package
+`@prodinfo/extension-contracts` version `0.1.0-alpha.1` in [packages/contracts](../packages/contracts/README.md).
+It provides strict operation/invocation/result/error schemas, inferred TypeScript declarations,
+generated JSON Schema, bounded JSON validation/canonicalization and synthetic fixtures/tests.
+Only `read`/`configure` operations and completed results/errors are executable in this subset.
+No package-registry publication, stable SDK/manifest, guest runner, jobs/events/telemetry API,
+connector or live-provider compatibility is delivered. Broader [contract draft](contract-draft.md)
+remains a proposal; executable source is canonical for the implemented subset.
 
-TypeScript is the authoring language. The architecture has no requirement to retain native Rust.
-Preserve external integration wire behavior when adapters are migrated; current compatibility and
-new extension protocol are separate boundaries. Do not infer implemented routes/provider support
-from a proposed package name or example.
+The package is original public MIT code; no Accounting/Desktop implementation, private paths,
+credentials or customer data were imported. Public build/test needs no private repository/token.
+The private host consumes a packed, hash-pinned public artifact and exercises matching requests.
+Packing/source commits do not publish to npm, certify a marketplace package or activate a routine.
 
-Configuration screens are host-rendered from declarations. Actions may check/discover/pull/preview/
-run under explicit grants. Guest code uses bounded SDK operations rather than ambient Node, secrets,
-DB or network. Package versions/config instances/runs/authoring drafts remain separate identities.
+## Development and validation
 
-AI-assisted authoring is a core use case: predefined routines can be forked into drafts, checked,
-tested against fixtures/samples, compared and explicitly activated. Activity evidence helps diagnosis;
-event subscriptions start authorized workflows. Neither publication nor conversation grants access.
+Node 24.x (local verification 24.1.0), pnpm 11.0.8, TypeScript 7.0.2, Zod 4.6.7 and Biome 2.6.2
+are pinned. `pnpm install --frozen-lockfile --ignore-scripts`; `pnpm check` runs formatting,
+typechecks, four contract tests, declaration/JS build and generated-schema drift checks.
+`pnpm generate` deliberately updates JSON Schema from source. GitHub checks are configured for
+Linux/macOS/Windows with public dependencies only; a configured workflow is not a passed CI run.
+Local checks passed on macOS; Node emits its type-stripping experimental warning. No Windows/Linux
+installer, real provider, complete SDK or normal PostgreSQL compatibility has been accepted.
 
-## Current review work
+## Ownership and unchanged requirements
 
-A review-only [contract draft](contract-draft.md) now outlines module/action/package/invocation/result
-shapes and replay/scope/config/job/state/event semantics. It is not executable or stable. The roadmap
-is core-first: make a small contract executable with a real headless host; defer detailed connector,
-configuration UI and console surface plans until that core passes. No implementation was started.
+This repository owns public schemas/SDK/helpers, mocks/conformance, synthetic examples and all new
+integration-specific routines/destination adapters. Private host internals/admin schemas remain
+private. No separate contracts repository or shared Accounting DB. New official connectors remain
+public; customer/team routines can remain in an enterprise-local registry. Public cloning/building
+must never require a private checkout or customer samples. Keep existing Standard Integration API
+wire ownership separate; this package is not a replacement protocol for existing shop plugins.
 
-Next after review: E1 schemas/types/fixtures and real-core conformance through a CLI/test client.
-Public tests remain independent of private source. No version, callable operation, package-registry
-release or new live provider/OS acceptance exists. Documentation checks are the only checks in this
-slice. Local links/fences/newlines/roadmap ownership, focused public-content scan and diff checks
-passed; no runtime/schema/code tests or builds were run.
+Definitions/config forms/actions are declarations. Host policy enforces every capability, current
+identity/authority and effect, regardless of a modified SDK or publisher signature. Guests will use
+bounded host operations without ambient Node/SQL/files/network. Code/config/draft/activation/run
+pins stay distinct. Team registry publication, Git history, configuration-file backup and activation
+are different operations. No cloud configuration-backup dependency is introduced.
 
-## Team/project resource refinement
+Task-level operator console delegation can cover ordinary UI operations without per-save approval;
+public guest projection remains narrower. Credentials/self-authority changes stay protected. Current
+experimental metadata covers descriptions/schemas/effect/capabilities/delegability, not a complete
+availability/precondition/recovery schema. Telemetry/state/resources/event/lifecycle refinements in
+the design docs remain unimplemented acceptance requirements, added alongside tested capabilities.
 
-The latest draft includes enterprise-local registries for in-house source/build/test packages,
-Git-compatible authoring history and named project/routine input/output/work bindings. These are
-portable author contracts with host-resolved locations; no raw absolute path/SQL or mutable Git
-branch is an active runtime dependency. Shared workspace authority owns jobs/steps/receipts;
-execution agents/cache files are not independent replicated truth. Registry publication, config
-backup, activation and running remain distinct. No schema/runtime implementation or new stable
-method/field is released. Core-first proof still precedes interface/provider plans.
+## Next
 
-## Activity/trace refinement
-
-User wants console access to all authorized configuration and system/routine evidence with a central
-registry, tags and routine parts. [Telemetry draft](telemetry-draft.md) is the canonical public
-proposal: OpenTelemetry-style context, host-stamped identities, stable step/part/source/code/config
-refs and bounded structured messages/query coverage. Core facts/audit receipts and routine claims
-are distinct; log content is not authority. No executable logger/query API or dependency is released.
-
-## Design review refinements
-
-The contract draft now records lifecycle/recovery acceptance: authenticated replay visibility,
-current authority versus historical pins, restricted pinned dependencies, state/version removal,
-bounded execution, explicit timer/event policies, effect crash recovery and consumer-specific export
-semantics. Public-web and private/LAN destination capabilities remain distinct. Evaluation tests
-do not turn a valid model result into factual accuracy or grant new permissions.
-
-These conformance groups enter alongside each executable capability, not as a demand to implement
-the entire SDK before a minimal host. No methods/versions/schema/runtime are released. Public docs
-link/fence/newline/checklist and content-scan/diff validation passed; no executable tests/builds in
-this repository. No legacy/private source, data or credentials were copied.
-
-## UI/AI operational parity refinement
-
-User requests near UI parity for console management: configure/create/manage entities, launch,
-inspect validation/results, correct and relaunch. Contract draft now proposes automation metadata,
-transparent preconditions/availability/recovery and bounded task-level delegation. No confirmation
-for every already-granted operation; distinct activate/apply/deliver outcomes may be delegated.
-Credential entry/authority expansion remain explicit exceptions. Operator-console authority is not
-inherited by downloaded routines; public guest projection stays narrower. No executable schema,
-method/version release, runtime implementation or test/build is introduced by this draft.
+Keep E1 open overall. Expand conformance with the real core: server-PG/PGlite recovery/transaction
+parity, state/resource scope, cancellation and bounded isolated guest execution. Introduce durable
+job/config/package/event contracts only with matching host proof. UI/config/console interfaces and
+provider-specific plans follow the core. Source sharing/marketplace publication/OS acceptance retain
+their own gates; no provider or future operation exists merely because it appears in the draft.

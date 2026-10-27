@@ -1,8 +1,9 @@
 # Public contract scope and ownership
 
 This public repository is the canonical owner of the new extension-facing contract and author SDK.
-The private host implements it and consumes pinned releases. No executable schema/version is yet
-released. This document defines scope; the [contract draft](contract-draft.md) proposes review-only
+The private host implements it and consumes pinned artifacts. The first experimental
+[command subset](../packages/contracts/README.md) is executable at 0.1.0-alpha.1, not npm-published
+or stable. This document defines scope; the [contract draft](contract-draft.md) proposes broader
 shapes. They are not stable JSON fields or callable commands until executable schemas/conformance.
 
 ## Public surface

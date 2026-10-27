@@ -1,6 +1,8 @@
 # Compatibility and releases
 
-Design policy. No SDK, manifest version or host compatibility range is published yet.
+Design policy. Experimental command contracts 0.1.0-alpha.1 are source/packed artifacts only;
+no stable SDK, manifest or npm version is published. This first read/configure subset does not
+support jobs, guest packages, events or provider delivery. See [package scope](../packages/contracts/README.md).
 
 Independently version the contract package, SDK/testing packages and individual connectors/routines.
 Semantic changes require compatibility review; a provider mapping fix should not bump unrelated

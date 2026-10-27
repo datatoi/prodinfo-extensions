@@ -1,0 +1,42 @@
+# ProdInfo Extensions
+
+Public home for the ProdInfo extension contracts, TypeScript SDK, official routines and destination
+connectors. Build configurable integrations and workflows against a documented host capability API.
+The Workbench application is private; extension development must not require its source.
+
+**Status:** documentation bootstrap, 27 October 2026. There is no released SDK, executable schema,
+connector implementation or package-registry release yet. Layouts below are targets, not install
+commands or compatibility promises.
+
+## Start here
+
+- [Current context](docs/context.md) — single handoff for this repository.
+- [Roadmap](docs/roadmap.md) — the only implementation checklist.
+- [Extension architecture](docs/architecture.md) — packages, actions, config and sandbox boundary.
+- [Public contract scope](docs/contract-scope.md) — what is public and who owns the definitions.
+- [Compatibility](docs/compatibility.md) — versions, checks and release expectations.
+- [Contributing](CONTRIBUTING.md) — source, tests and publication expectations.
+
+## Planned layout
+
+```text
+packages/contracts/       canonical manifest/config/action/capability/result/event/state schemas
+packages/sdk/             generated TypeScript API and pure author helpers
+packages/testing/         mock host, synthetic fixtures and conformance tooling
+extensions/               independently versioned official connectors and workflow packages
+examples/                 minimal synthetic authoring examples
+```
+
+All new destination-specific adapter logic, profiles and fixtures should live here. The trusted host
+owns execution policy, credentials, authorized transport, canonical records, queues and receipts.
+Adapters can pull through an approved connection or deliver an assigned payload; they cannot read
+arbitrary host data or bypass review. Configuration GUI actions and AI-authored routines use the
+same supported operations as manual UI workflows.
+
+Individual publishers may use their own repositories and compatible versioned artifacts. This repo
+is not a requirement to host every marketplace package. Publication, certification and activation
+are separate processes; no commercial distribution service is implemented by this bootstrap.
+
+New original repository content is [MIT licensed](LICENSE). Reused third-party material retains its
+own license/NOTICE obligations and must be reviewed before import. No customer data or private host
+source is included.

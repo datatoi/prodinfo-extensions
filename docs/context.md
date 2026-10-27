@@ -24,8 +24,10 @@ Node 24.x (local verification 24.1.0), pnpm 11.0.8, TypeScript 7.0.2, Zod 4.6.7 
 are pinned. `pnpm install --frozen-lockfile --ignore-scripts`; `pnpm check` runs formatting,
 typechecks, four contract tests, declaration/JS build and generated-schema drift checks.
 `pnpm generate` deliberately updates JSON Schema from source. GitHub checks are configured for
-Linux/macOS/Windows with public dependencies only; a configured workflow is not a passed CI run.
-Local checks passed on macOS; Node emits its type-stripping experimental warning. No Windows/Linux
+Linux/macOS/Windows with public dependencies only. Source
+[CI](https://github.com/datatoi/prodinfo-extensions/actions/runs/40581754727) passed at 746775a
+after enforcing LF text checkout; no contract runtime change was needed. Local checks passed on
+macOS; Node emits its type-stripping experimental warning. No Windows/Linux
 installer, real provider, complete SDK or normal PostgreSQL compatibility has been accepted.
 
 ## Ownership and unchanged requirements

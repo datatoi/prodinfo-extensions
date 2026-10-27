@@ -18,7 +18,7 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
 
 - [x] E1a: original read/configure operation + invocation/completed-result/error schemas, bounded
   JSON, generated declarations/JSON Schema and synthetic valid/forged fixtures. Four local tests,
-  typecheck/build/schema drift checks; public-only three-OS CI configured, results tracked separately.
+  typecheck/build/schema drift checks; public-only Windows/macOS/Linux source CI passed at 746775a.
   The private host consumes a packed pinned artifact and exercises this subset; E1 stays open below.
 
 - [ ] Implement minimal strict schemas, generated author types and valid/invalid synthetic fixtures.

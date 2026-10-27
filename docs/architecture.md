@@ -67,3 +67,11 @@ Routines can use project defaults or their own named input/output/work roots. Ho
 those names to approved local/server resources, with immutable input snapshots and per-run outputs.
 Artifacts and source files differ from durable queue/step state. See [contract draft](contract-draft.md)
 for proposed semantics; no root-binding schema or filesystem API is released yet.
+
+## Unified activity with routine-part context
+
+Use host-stamped OpenTelemetry-compatible context and bounded structured diagnostic messages,
+with stable routine part labels and exact code/config/run/attempt refs. The host can correlate
+command/queue/worker/model/connector activity through one permission-aware query surface, while
+keeping domain events, audit receipts and diagnostic/trace retention distinct. See the canonical
+[telemetry proposal](telemetry-draft.md); no logging SDK or query API is released yet.

@@ -17,6 +17,7 @@ under review; detailed screen/provider plans follow core validation.
 - [Roadmap](docs/roadmap.md) — the only implementation checklist.
 - [Extension architecture](docs/architecture.md) — packages, actions, config and sandbox boundary.
 - [Contract draft for review](docs/contract-draft.md) — proposed shapes and core acceptance.
+- [Telemetry draft](docs/telemetry-draft.md) — routine parts, logs, trace context and query semantics.
 - [Public contract scope](docs/contract-scope.md) — what is public and who owns the definitions.
 - [Compatibility](docs/compatibility.md) — versions, checks and release expectations.
 - [Contributing](CONTRIBUTING.md) — source, tests and publication expectations.

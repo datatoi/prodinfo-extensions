@@ -21,6 +21,9 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
   external uncertainty explicit. Establish public CI and versioned artifacts only when executable.
 - [ ] Test project/routine resource bindings, input pins, output/scratch scope and immutable team-
   registry sources through the same contract; no engine-specific DB or private-source dependency.
+- [ ] Host-stamped operation/run/attempt/step/part trace context, structured diagnostic schemas and
+  logger/query conformance: forged identity, overflow/suppression, secret masking and event separation.
+  [Telemetry proposal](telemetry-draft.md) remains review-only until executable schemas exist.
 
 ## E2 — destination interface proof after core acceptance
 

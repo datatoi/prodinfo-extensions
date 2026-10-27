@@ -12,6 +12,9 @@ request/result/error types, supported domain-operation projections, event subscr
 and scoped-state/migration contracts. Include synthetic valid/invalid fixtures, generated TypeScript
 SDK/helpers, mock-host tooling, author documentation and conformance requirements.
 
+The [telemetry draft](telemetry-draft.md) proposes host-bound logging/trace context, routine part
+identification and scoped query semantics. Diagnostics do not impersonate committed core events.
+
 One canonical schema/definition source should generate derived types and documentation. Host
 semantic validation is still required. Version public operations only when implementation and
 conformance agree; draft names in discussions are not supported wire contracts.

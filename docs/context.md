@@ -46,3 +46,11 @@ branch is an active runtime dependency. Shared workspace authority owns jobs/ste
 execution agents/cache files are not independent replicated truth. Registry publication, config
 backup, activation and running remain distinct. No schema/runtime implementation or new stable
 method/field is released. Core-first proof still precedes interface/provider plans.
+
+## Activity/trace refinement
+
+User wants console access to all authorized configuration and system/routine evidence with a central
+registry, tags and routine parts. [Telemetry draft](telemetry-draft.md) is the canonical public
+proposal: OpenTelemetry-style context, host-stamped identities, stable step/part/source/code/config
+refs and bounded structured messages/query coverage. Core facts/audit receipts and routine claims
+are distinct; log content is not authority. No executable logger/query API or dependency is released.

@@ -100,6 +100,7 @@ write as read. An accepted reply proves durable admission, not external delivery
 | Source/registry | Checked immutable sources/build/resources; Git/working-tree changes and team publication do not replace active pins |
 | Runners | Workspace owns authoritative job/step/receipt state; an execution attempt/cache cannot become a second authority |
 | Events | Committed versioned facts with scoped refs; subscription pins config/routine/grants and duplicate identity |
+| Diagnostics/traces | Host-stamped context, structured bounded routine messages/parts and permission-aware queries; logs do not impersonate core facts |
 | Effects | Lost external acknowledgement requires receipt/reconciliation; a workflow replay is not an unconditional resend |
 | Evidence | References pin immutable retained content/revisions; an arbitrary URL or quote is not validation |
 | Cancellation | Stop admission/attempt where supported and fence late commits; do not claim remote effects were undone |
@@ -141,3 +142,10 @@ Persistence engine and registry administration are host details. Keep storage ty
 of the author SDK; identical contracts should work against a local service or shared team workspace.
 When state is shared, execution agents report to one workspace authority and must respect lease/
 revision fencing on reconnect. No multi-master DB synchronization is promised by package sharing.
+
+## Activity/trace instrumentation
+
+[Telemetry draft](telemetry-draft.md) owns the proposed extension logger/part/correlation boundary.
+Use host-bound context and standard trace/span conventions with package/config/run/attempt/step
+identity. Retained activity and configuration queries are scoped; secrets remain opaque. A central
+query surface does not equate diagnostics with transaction/audit receipts or event-trigger authority.

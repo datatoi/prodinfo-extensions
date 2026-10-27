@@ -51,6 +51,20 @@ experimental metadata covers descriptions/schemas/effect/capabilities/delegabili
 availability/precondition/recovery schema. Telemetry/state/resources/event/lifecycle refinements in
 the design docs remain unimplemented acceptance requirements, added alongside tested capabilities.
 
+## Planned shared progress and interactive tasks
+
+User requests generic routine stages/progress, retry/restart, approvals/mid-run item input and batch
+processing, with optional home views. [Execution draft](routine-execution.md) defines proposed
+author semantics: host-owned run/step/item/attempt state, honest unknown-total progress, durable
+schema/audience/revision-bound tasks, safe subset recovery and explicit follow-up runs. Waiting
+releases execution capacity; one item's question need not block unrelated items under batch policy.
+
+Every routine gets standard progress/attention/recovery views. Optional declarative cards/tables/
+forms/actions extend a routine home page; uploaded React/JS is excluded from trusted UI. Fully custom
+executable views are separate future scope. Console and manual paths share the same policy/actions.
+No runtime schemas, 0.1.0-alpha.1 package code/version, published artifact or SDK methods changed.
+Docs checks/content scan pass; existing source tests/CI are historical and were not rerun for prose.
+
 ## Next
 
 Keep E1 open overall. Expand conformance with the real core: server-PG/PGlite recovery/transaction

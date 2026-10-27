@@ -41,6 +41,11 @@ results to survive restart and avoid repeating effects. A provider timeout may m
 outcome, requiring a receipt/reconciliation rather than an unconditional retry. Exact protocols and
 limits will be defined with executable host conformance.
 
+[Execution/interaction draft](routine-execution.md) specifies one shared run/step/item/attempt and
+task model for progress, mid-run input/approval, batches and recovery. Long waits persist state and
+release VM/worker/transaction capacity. Default host views work for every routine; optional
+declarative routine home cards/forms/actions extend them without executing arbitrary package UI.
+
 ## Events, state and AI authoring
 
 Subscribe to declared, versioned committed-domain events through the host; receiving an event does

@@ -176,6 +176,11 @@ separate activation/apply/delivery outcomes do not imply blanket human-only exec
 
 ## Lifecycle and recovery acceptance from design review
 
+[Routine execution/interaction](routine-execution.md) now elaborates the planned run/step/item/
+attempt model, universal progress, durable input/approval tasks, batch policies and optional
+declarative routine views. These are not supported by 0.1.0-alpha.1's completed-command contract.
+Exact schemas/SDK methods follow C2 host conformance; no arbitrary guest UI code is implied.
+
 Review-only refinements, not new stable fields or callable methods. Add each conformance group when
 its capability becomes executable; the first minimal schema need not implement every group.
 

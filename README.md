@@ -21,6 +21,7 @@ under review; detailed screen/provider plans follow core validation.
 - [Extension architecture](docs/architecture.md) — packages, actions, config and sandbox boundary.
 - [Contract draft for review](docs/contract-draft.md) — proposed shapes and core acceptance.
 - [Telemetry draft](docs/telemetry-draft.md) — routine parts, logs, trace context and query semantics.
+- [Execution/interaction draft](docs/routine-execution.md) — shared progress, batches, input/approval tasks and optional views.
 - [Public contract scope](docs/contract-scope.md) — what is public and who owns the definitions.
 - [Compatibility](docs/compatibility.md) — versions, checks and release expectations.
 - [Contributing](CONTRIBUTING.md) — source, tests and publication expectations.

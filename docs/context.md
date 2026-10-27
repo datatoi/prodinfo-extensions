@@ -55,6 +55,19 @@ proposal: OpenTelemetry-style context, host-stamped identities, stable step/part
 refs and bounded structured messages/query coverage. Core facts/audit receipts and routine claims
 are distinct; log content is not authority. No executable logger/query API or dependency is released.
 
+## Design review refinements
+
+The contract draft now records lifecycle/recovery acceptance: authenticated replay visibility,
+current authority versus historical pins, restricted pinned dependencies, state/version removal,
+bounded execution, explicit timer/event policies, effect crash recovery and consumer-specific export
+semantics. Public-web and private/LAN destination capabilities remain distinct. Evaluation tests
+do not turn a valid model result into factual accuracy or grant new permissions.
+
+These conformance groups enter alongside each executable capability, not as a demand to implement
+the entire SDK before a minimal host. No methods/versions/schema/runtime are released. Public docs
+link/fence/newline/checklist and content-scan/diff validation passed; no executable tests/builds in
+this repository. No legacy/private source, data or credentials were copied.
+
 ## UI/AI operational parity refinement
 
 User requests near UI parity for console management: configure/create/manage entities, launch,

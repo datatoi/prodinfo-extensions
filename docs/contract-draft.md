@@ -171,3 +171,25 @@ Operation metadata proposes requirements; host policy/grants decide actual execu
 and the AI expanding its own authority are not ordinary delegated operations. The host may allow
 broad task/workspace automation without confirmation for each already authorized edit/test/run;
 separate activation/apply/delivery outcomes do not imply blanket human-only execution.
+
+## Lifecycle and recovery acceptance from design review
+
+Review-only refinements, not new stable fields or callable methods. Add each conformance group when
+its capability becomes executable; the first minimal schema need not implement every group.
+
+| Concern | Required author/host semantics |
+|---|---|
+| Replay visibility | Partition requests by authenticated workspace/principal/operation; repeat reads still require current authorization, not merely possession of a request ID |
+| Authority changes | Historical run/config/grant pins preserve evidence; revocation/expiry stops future unauthorized broker effects and does not undo an in-flight provider write |
+| Builds/dependencies | Start with declared restricted imports, exact dependency/resource digests and checked source/build identity; unsupported imports or install hooks fail explicitly |
+| Version/state lifecycle | Deactivation blocks new admission; removal retains referenced versions/state/artifacts or explicitly cancels/quarantines dependent work; failed migration and rollback preserve recoverable state |
+| Bounded execution | Query pages, host calls, parsers, outputs and model/child/retry budgets are bounded; one package cannot starve cancellation/lease renewal |
+| Timers/events | Explicit interval slot/missed/overlap/retry policy; supported event versions, cursor/replay/deduplication and failed-event quarantine/recovery; calendar support is separately declared |
+| Effect recovery | Test crashes around child admission and provider acceptance/receipt persistence; stable logical effect keys and broker attempt checks preserve honest uncertain outcomes |
+| Data evolution | Pin schema/field/mapping versions; reject stale field targets. Consumer-defined exports preserve literal IDs/format and disclose any spreadsheet-specific transformations |
+| Evidence/quality | Valid JSON/test completion is not factual accuracy; retained evidence, uncertainty, protected-value and baseline/candidate evaluation policies remain host/domain responsibilities |
+| Network capability | Public-web acquisition and approved private/LAN destinations have distinct broker policies; unsupported search/browser/protocol/library features report unavailability |
+
+Neither an SDK, signature nor successful fixtures grant capabilities. A package can supply a
+workflow only when the host actually provides its declared primitives; use an explicit external
+service boundary for unsupported integration requirements rather than privileged guest imports.

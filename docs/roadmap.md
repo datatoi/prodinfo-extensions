@@ -8,6 +8,9 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
 - [x] Bootstrap public repo, MIT license for new material, contribution rules and doc ownership.
 - [x] Record public contracts/SDK/testing/integration ownership and TypeScript/no-Rust requirement.
 - [x] Draft module/package/action/invocation/result semantics in [contract draft](contract-draft.md).
+- [x] Review lifecycle/failure gaps and record conformance requirements for authority changes,
+  package dependencies/removal, timers/events, effect recovery and consumer-specific exports.
+  This is design review only, not executable compatibility or a completed runtime milestone.
 - [ ] Review the smallest contract boundary before assigning executable protocol/package versions.
 
 ## E1 — executable contract and core conformance
@@ -17,10 +20,14 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
   speculative complete SDK before the operations exist.
   Describe operation automation/effect/precondition/availability/validation/recovery so delegated
   console and manual calls can be tested for parity without broadening guest package authority.
+  Specify authenticated replay visibility, current authority versus historical pins and restricted
+  dependency/build identity with the first corresponding executable capabilities.
 - [ ] Mock host and CLI/test example for config, action, durable job, request replay, denied scope,
   malformed schema and late cancellation cases; no private checkout or real provider required.
 - [ ] Validate against the first real headless core; keep package/config/activation/run identity and
   external uncertainty explicit. Establish public CI and versioned artifacts only when executable.
+  Add lifecycle/recovery conformance as capabilities enter the schema: removal/migration failure,
+  interval missed/overlap rules, event replay/quarantine and broker-side effect crash windows.
 - [ ] Test project/routine resource bindings, input pins, output/scratch scope and immutable team-
   registry sources through the same contract; no engine-specific DB or private-source dependency.
 - [ ] Host-stamped operation/run/attempt/step/part trace context, structured diagnostic schemas and
@@ -44,6 +51,8 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
   sample test → compare → explicit activation, retaining version/grant/cost/side-effect boundaries.
   Exercise configure/launch/validate/correct/resume/relaunch within a bounded task grant, including
   protected actions and unchanged-retry versus new-version-run semantics; no manual save per step.
+  Include bounded evaluation/cost and hostile source/log cases. Consumer-specific CSV round-trip
+  behavior must preserve original identities rather than silently apply spreadsheet escaping.
 - [ ] Provide reusable CSV enrichment/review/export and competitor discovery/approved-watchlist/
   monitoring examples; failed checks preserve last valid observations, no automatic repricing.
 

@@ -7,8 +7,8 @@ and [compatibility](compatibility.md) before implementing or naming public API f
 
 A connector describes and implements integration-specific discovery/read/intake/delivery behavior.
 A routine orchestrates supported operations and can use connectors. Both use checked TypeScript,
-a versioned manifest, configuration/action schemas, declared capabilities and tests. New destination
-implementations, profiles and official workflows are open-source here. A third party can publish
+a versioned manifest, configuration/action schemas, declared capabilities and tests. New official destination
+implementations, profiles and workflows are open-source here. A third party can publish
 its own compatible package from another repository.
 
 The private host owns canonical records, source identities, schema/plan/evidence validation,
@@ -55,3 +55,15 @@ Predefined workflows are starting points. The console can fork a version into a 
 patch code/config/tests, validate types/schemas and test fixtures/approved samples. Changed authority,
 activation, deployment, scheduling and external effects require explicit host policy, not simply
 successful compilation. Share reusable sources/synthetic fixtures without customer data or secrets.
+
+## Team registry and project resources
+
+An enterprise may host its own registry for in-house source/build/test versions. Git-compatible
+history manages project development; immutable registry versions manage distribution. Publishing
+or editing shared sources does not alter existing activations/runs. A public marketplace is optional,
+and private team code is not automatically public. The host owns registry administration/access.
+
+Routines can use project defaults or their own named input/output/work roots. Host bindings resolve
+those names to approved local/server resources, with immutable input snapshots and per-run outputs.
+Artifacts and source files differ from durable queue/step state. See [contract draft](contract-draft.md)
+for proposed semantics; no root-binding schema or filesystem API is released yet.

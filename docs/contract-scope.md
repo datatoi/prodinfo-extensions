@@ -23,7 +23,8 @@ policy evaluation and credential material. Public contracts describe authorizati
 and error behavior without granting access. Modified SDK code cannot bypass host enforcement.
 No shared business database with a destination or another application is part of the SDK.
 
-All destination-specific implementation/config profiles/tests belong in public connector packages.
+Official destination-specific implementation/config profiles/tests belong in public connector packages.
+Customer-developed team packages may remain private and use an enterprise-local registry.
 The host retains generic transport/auth/storage/job machinery, data invariants and delivery truth.
 Do not hide provider-specific integration code in a private package to make a public connector build.
 

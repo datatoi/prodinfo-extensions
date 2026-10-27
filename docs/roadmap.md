@@ -19,6 +19,8 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
   malformed schema and late cancellation cases; no private checkout or real provider required.
 - [ ] Validate against the first real headless core; keep package/config/activation/run identity and
   external uncertainty explicit. Establish public CI and versioned artifacts only when executable.
+- [ ] Test project/routine resource bindings, input pins, output/scratch scope and immutable team-
+  registry sources through the same contract; no engine-specific DB or private-source dependency.
 
 ## E2 — destination interface proof after core acceptance
 
@@ -46,5 +48,5 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
 - [ ] Synthetic auth/reference/variant/payload/per-item/uncertainty tests and documented provider-
   account acceptance, permissions and supported versions for each published package.
 - [ ] Independently versioned contracts/SDK/extensions, license/provenance notices, immutable artifacts,
-  external publisher starter and explicit marketplace publication. Certification/advisory/update
+  external publisher starter, enterprise-local registry interoperability and explicit marketplace publication. Certification/advisory/update
   controls and commercial/revenue-sharing terms remain separate platform designs.

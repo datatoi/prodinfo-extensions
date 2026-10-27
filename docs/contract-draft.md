@@ -95,7 +95,10 @@ write as read. An accepted reply proves durable admission, not external delivery
 | Configuration | Config instance/revision is host-owned; secrets are opaque refs; edits stale prior check results |
 | GUI actions | Host renders declarations; explicit action invocation performs work; render/save does not call a provider |
 | Long work | Submission returns a job; job/step/attempt pins survive client/VM lifetime and host restart |
-| State | Derived installation/config namespace, bounded typed operations/CAS; no raw SQL/DDL/file path choice |
+| State | Derived installation/config namespace, bounded typed operations/CAS; no raw SQL/DDL or arbitrary absolute path choice |
+| Resources | Named project/routine input/output/work bindings; host-resolved locations, input snapshots and run-scoped outputs |
+| Source/registry | Checked immutable sources/build/resources; Git/working-tree changes and team publication do not replace active pins |
+| Runners | Workspace owns authoritative job/step/receipt state; an execution attempt/cache cannot become a second authority |
 | Events | Committed versioned facts with scoped refs; subscription pins config/routine/grants and duplicate identity |
 | Effects | Lost external acknowledgement requires receipt/reconciliation; a workflow replay is not an unconditional resend |
 | Evidence | References pin immutable retained content/revisions; an arbitrary URL or quote is not validation |
@@ -118,3 +121,23 @@ separate semantics. The existing Standard Integration API is preserved, not rede
 Specific actions, methods, pagination, receipt states and transport fields will get an executable
 schema and detailed adapter roadmap after the first core passes. No real integration support or
 compatibility version is implied by the sketch above.
+
+## Projects, source sharing and file bindings
+
+Packages may come from a public repository, an enterprise-local registry or a private managed draft.
+A team can keep in-house TypeScript source, helpers/config/tests and immutable checked versions
+without public/cloud publication. Git-compatible project history is separate from registry release,
+workspace activation and job checkpoints. Runners execute pinned content, not a mutable Git branch.
+Neither a shared folder nor package publication transfers execution grants or credentials.
+
+Project/routine input/output/scratch roots are host configuration. Public declarations use logical
+resource names, bounded relative-member operations and declared output artifacts; the host resolves
+approved locations on the selected execution host. No arbitrary absolute path or process working-
+directory access is implied. Inputs are pinned; outputs are isolated/finalized per run and retries
+must not silently overwrite user files. Remote execution needs remote bindings or explicit transfer,
+not interpretation of a workstation path. Exact resource schema fields follow executable core tests.
+
+Persistence engine and registry administration are host details. Keep storage types/credentials out
+of the author SDK; identical contracts should work against a local service or shared team workspace.
+When state is shared, execution agents report to one workspace authority and must respect lease/
+revision fencing on reconnect. No multi-master DB synchronization is promised by package sharing.

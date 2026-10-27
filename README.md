@@ -31,7 +31,8 @@ extensions/               independently versioned official connectors and workfl
 examples/                 minimal synthetic authoring examples
 ```
 
-All new destination-specific adapter logic, profiles and fixtures should live here. The trusted host
+All new official destination-specific adapter logic, profiles and fixtures should live here.
+Customer-authored in-house packages may stay private in an enterprise-local registry. The trusted host
 owns execution policy, credentials, authorized transport, canonical records, queues and receipts.
 Adapters can pull through an approved connection or deliver an assigned payload; they cannot read
 arbitrary host data or bypass review. Configuration GUI actions and AI-authored routines use the

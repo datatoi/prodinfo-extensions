@@ -36,3 +36,13 @@ Public tests remain independent of private source. No version, callable operatio
 release or new live provider/OS acceptance exists. Documentation checks are the only checks in this
 slice. Local links/fences/newlines/roadmap ownership, focused public-content scan and diff checks
 passed; no runtime/schema/code tests or builds were run.
+
+## Team/project resource refinement
+
+The latest draft includes enterprise-local registries for in-house source/build/test packages,
+Git-compatible authoring history and named project/routine input/output/work bindings. These are
+portable author contracts with host-resolved locations; no raw absolute path/SQL or mutable Git
+branch is an active runtime dependency. Shared workspace authority owns jobs/steps/receipts;
+execution agents/cache files are not independent replicated truth. Registry publication, config
+backup, activation and running remain distinct. No schema/runtime implementation or new stable
+method/field is released. Core-first proof still precedes interface/provider plans.

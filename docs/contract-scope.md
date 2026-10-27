@@ -2,7 +2,8 @@
 
 This public repository is the canonical owner of the new extension-facing contract and author SDK.
 The private host implements it and consumes pinned releases. No executable schema/version is yet
-released; this document defines scope, not JSON field names or callable commands.
+released. This document defines scope; the [contract draft](contract-draft.md) proposes review-only
+shapes. They are not stable JSON fields or callable commands until executable schemas/conformance.
 
 ## Public surface
 

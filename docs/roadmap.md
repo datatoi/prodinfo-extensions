@@ -1,52 +1,50 @@
-# Extensions roadmap
+# Extensions roadmap — contract first, interfaces after the core
 
-Single implementation checklist. [Context](context.md) records current state and actual validation.
+Draft 1 for review, 27 October 2026. Sole task checklist. Keep milestones coarse until a working
+host proves the boundary; detailed connector/action GUI plans follow core acceptance.
 
-## E0 — public foundation
+## E0 — public foundation and review draft
 
-- [x] Bootstrap public repo, MIT license for new material, contribution rules and documentation.
-- [x] Record canonical public contract/SDK ownership and independent versioning from the private host.
-- [x] Record public destination-adapter scope and no requirement to retain Rust.
+- [x] Bootstrap public repo, MIT license for new material, contribution rules and doc ownership.
+- [x] Record public contracts/SDK/testing/integration ownership and TypeScript/no-Rust requirement.
+- [x] Draft module/package/action/invocation/result semantics in [contract draft](contract-draft.md).
+- [ ] Review the smallest contract boundary before assigning executable protocol/package versions.
 
-## E1 — minimal contract and executable example
+## E1 — executable contract and core conformance
 
-- [ ] Define a pre-release manifest, compatibility/capability model and strict input/output/error
-  schemas for a minimal fixture-only action. Keep speculative operations out of a stable protocol.
-- [ ] Generate TypeScript author types/SDK from canonical schema definitions and verify generation.
-- [ ] Add mock host, synthetic valid/invalid fixtures and executable example with config validation.
-- [ ] Prove package sources cannot broaden capabilities or escape declared resources/SDK operations.
-- [ ] Add dependency-light public build/test CI with no private checkout/token requirements; coordinate
-  real-host conformance through the same published schema/fixture versions.
+- [ ] Implement minimal strict schemas, generated author types and valid/invalid synthetic fixtures.
+  Separate core metadata/public guest projection from private administration; do not publish a
+  speculative complete SDK before the operations exist.
+- [ ] Mock host and CLI/test example for config, action, durable job, request replay, denied scope,
+  malformed schema and late cancellation cases; no private checkout or real provider required.
+- [ ] Validate against the first real headless core; keep package/config/activation/run identity and
+  external uncertainty explicit. Establish public CI and versioned artifacts only when executable.
 
-## E2 — authoring and configurable actions
+## E2 — destination interface proof after core acceptance
 
-- [ ] Declarative configuration forms/action descriptions: Check connection, Discover, Pull, Preview,
-  Run. Distinguish structural validation, authorized reads, intake and external write effects.
-- [ ] SDK diagnostics/source checking and fixtures supporting AI draft/patch/test loops without
-  granting application-source access or automatic activation/deployment/publication.
-- [ ] Safe author examples for external IDs, source bindings, field targets, evidence/proposal
-  submission and reviewed delivery. Keep package state separate from canonical host truth.
-- [ ] Versioned state/event capabilities, limits, migration declarations and namespaced custom events,
-  coordinated with host implementation and conformance rather than prose-only promises.
+- [ ] Write a detailed first adapter plan against the tested core. Start with generic Standard API
+  compatibility for existing shop/service APIs, approved public wire artifacts and reference rules.
+- [ ] Public config/check/discovery/read/intake/delivery package and fixtures; host-owned credentials/
+  transport/state/receipts, per-item outcomes and idempotency/reconciliation.
+- [ ] Pin compatibility and perform selected real-target acceptance separately from mock tests.
+  No private vendor implementation or private build dependency behind a public wrapper.
 
-## E3 — destination compatibility
+## E3 — interface/console authoring support
 
-- [ ] Public generic Standard API connector/profile with approved wire schemas/fixtures from their
-  existing owner. Cover WooCommerce/Magento service behavior without private source dependencies.
-- [ ] Port 1C and other destination adapters individually to public TypeScript packages after checking
-  actual legacy capabilities, licensing and behavior. A directory is not a shipping integration.
-- [ ] Per-item outcomes, revision/payload pins, identity/reference mapping, pagination, rate handling,
-  idempotency and uncertain-send reconciliation. Test without real customer data first.
-- [ ] Provider-specific live-account acceptance, permission/config requirements and compatibility
-  matrix; no automatic claim of support based on synthetic tests.
+- [ ] Formalize form hints/action metadata, typed evidence/state/event operations and fixtures only
+  as implemented by core. Configuration GUI/AI views use the same contract, not guest UI scripts.
+- [ ] SDK diagnostics/examples supporting predefined routine fork → patch → type/schema/fixture/
+  sample test → compare → explicit activation, retaining version/grant/cost/side-effect boundaries.
+- [ ] Provide reusable CSV enrichment/review/export and competitor discovery/approved-watchlist/
+  monitoring examples; failed checks preserve last valid observations, no automatic repricing.
 
-## E4 — reusable workflows and publication
+## E4 — additional integration parity and distribution
 
-- [ ] Predefined CSV enrichment preparation/review/export and competitor discovery/watchlist/monitoring
-  examples. Separate uncertain identity/price evidence from approved matches and last valid history.
-- [ ] Fork/compare/test examples for rapid AI-authored workflow changes; retain baseline/failed-step
-  evidence and demonstrate bounded resume without duplicating committed effects.
-- [ ] Independently versioned SDK/contracts/extensions, release artifacts, provenance/license notices,
-  immutable digests, compatibility metadata and an external-publisher starter.
-- [ ] Package registry/distribution and explicit marketplace submission; certification scope per
-  version, advisory/revocation/update policy and commercial licensing remain separate designs.
+- [ ] Plan and port remaining destination behaviors individually, including the native legacy adapter
+  family and file/webhook/broker integrations. Validate actual source capabilities and wire behavior;
+  a package name/registration does not certify a live marketplace.
+- [ ] Synthetic auth/reference/variant/payload/per-item/uncertainty tests and documented provider-
+  account acceptance, permissions and supported versions for each published package.
+- [ ] Independently versioned contracts/SDK/extensions, license/provenance notices, immutable artifacts,
+  external publisher starter and explicit marketplace publication. Certification/advisory/update
+  controls and commercial/revenue-sharing terms remain separate platform designs.

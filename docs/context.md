@@ -24,7 +24,15 @@ AI-assisted authoring is a core use case: predefined routines can be forked into
 tested against fixtures/samples, compared and explicitly activated. Activity evidence helps diagnosis;
 event subscriptions start authorized workflows. Neither publication nor conversation grants access.
 
-Next: design the smallest pre-release manifest/action/config/capability boundary and synthetic
-conformance fixture, derive the TypeScript SDK and prove it against a host adapter. Keep author docs
-honest about supported versions and missing behavior. Schema/SDK versions and supported command
-names are not defined yet. Public CI and package-release infrastructure remain open roadmap work.
+## Current review work
+
+A review-only [contract draft](contract-draft.md) now outlines module/action/package/invocation/result
+shapes and replay/scope/config/job/state/event semantics. It is not executable or stable. The roadmap
+is core-first: make a small contract executable with a real headless host; defer detailed connector,
+configuration UI and console surface plans until that core passes. No implementation was started.
+
+Next after review: E1 schemas/types/fixtures and real-core conformance through a CLI/test client.
+Public tests remain independent of private source. No version, callable operation, package-registry
+release or new live provider/OS acceptance exists. Documentation checks are the only checks in this
+slice. Local links/fences/newlines/roadmap ownership, focused public-content scan and diff checks
+passed; no runtime/schema/code tests or builds were run.

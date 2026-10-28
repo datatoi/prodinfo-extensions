@@ -66,8 +66,13 @@ A reservation is not a send or new guest authority; public notification schemas/
 
 Reference host a8d6f12 adds synthetic attempt/dispatch/recovery and held/spent/released settlement
 (157 tests/three smokes on Windows/macOS/Linux plus all 114 PG18 cases pass CI). Known rejection can retry;
-uncertain acceptance requires reviewed reconciliation. Automatic routing and real transports/
-secret/recipient/disclosure brokers remain open; the public artifact is unchanged.
+uncertain acceptance requires reviewed reconciliation. The follow-up below adds automatic routing;
+real transports/secret/recipient/disclosure brokers remain open and the public artifact is unchanged.
+
+Reference host 60217ef adds explicit future-event notification routing, atomic cursor/request capture
+and durable policy/quota deferral. Source CI passes 170 tests/three smokes on Windows/macOS/Linux
+plus all 126 isolated PG18 cases. Automatic origin fences preserve manual deduplication ownership on disable/rebind.
+No public contract change, notification SDK, provider transport or package release is included.
 
 - [ ] Implement minimal strict schemas, generated author types and valid/invalid synthetic fixtures.
   Separate core metadata/public guest projection from private administration; do not publish a

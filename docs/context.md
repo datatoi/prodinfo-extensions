@@ -165,9 +165,23 @@ Source CI passes 157 tests/three built smokes on Windows/macOS/Linux plus all 11
 Killed-host proofs
 cover undispatched, potentially accepted and checkpointed acceptance windows with a local fixture
 ledger; worker tokens stay private. The opt-in developer executor uses simulated transport only.
-Automatic routing, real secret/recipient/disclosure brokers, provider evidence, cross-install limits
-and live adapters remain open. Public alpha.4/artifact/guest grants are unchanged; no notification
-SDK or real external delivery is released.
+That worker slice did not add automatic routing; the follow-up below does. Real secret/recipient/
+disclosure brokers, provider evidence, cross-install limits and live adapters remain open.
+Public alpha.4/artifact/guest grants are unchanged; no notification SDK or real external delivery is released.
+
+## Reference host automatic notification-routing proof
+
+Reference host 60217ef adds explicit future-event owner opt-in and durable metadata-only requests.
+Route/target pins and commit-ordered cursors prevent historical rebroadcast or silent redirection.
+Channel policy/quota waits preserve requests without reserving units or blocking inbox/task handling.
+Automatic-origin checks stop unsent work after disable/rebind while preserving manual ownership
+when logical deduplication finds an existing manual delivery. Admission status remains distinct from
+actual attempt/provider acceptance. Source CI passes 170 tests/three built smokes on
+Windows/macOS/Linux plus all 126 isolated PG18 cases.
+Three killed-process boundaries, additive migration and real host/built JS exercise recovery.
+The PG suite now has 126 cases, including capture/admission, disable and source-commit pool races.
+Public alpha.4/artifact/guest grants are unchanged. No notification schema, sender SDK, real channel,
+secret/recipient/disclosure broker, retention service or external delivery is released.
 
 ## Notification and attention direction — proposal
 

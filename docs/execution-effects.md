@@ -59,3 +59,9 @@ to resend or refund. Source CI passes 157 tests/three smokes on Windows/macOS/Li
 isolated PG18 cases.
 The public artifact and guest grants remain unchanged; there is no released notification SDK,
 provider transport or exactly-once external delivery guarantee.
+
+Reference host 60217ef adds private owner configuration and request control/recheck over durable
+future-event routing. Deferred admission has no reserved unit; admitted request metadata points to
+separate delivery-attempt truth. Changing automation cannot redirect retained pins or take control
+of a manually deduplicated delivery. Source CI passes 170 tests/three smokes on Windows/macOS/Linux
+plus all 126 isolated PG18 cases. Alpha.4 gains no notification API or additional guest capabilities.

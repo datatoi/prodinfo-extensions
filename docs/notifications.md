@@ -2,7 +2,7 @@
 
 28 October 2026. Add notification adapters to the existing core task/event model, starting with
 Discord webhook messages and a platform EmailService relay. Mobile push/control stays later.
-This is design only; alpha.4 exposes no notification, inbox, UI-intent or external-send SDK.
+Adapters remain design-only; alpha.4 exposes no notification, inbox, UI-intent or external-send SDK.
 
 The host owns actual run/task state, authorized inbox queries, per-user read/snooze/archive,
 transactional outbox and channel delivery receipts. Opening/dismissing a notice never answers an
@@ -17,6 +17,14 @@ checks and restart/replay preservation, independently of task resolution. Existi
 stay compatible. Unread paging/counts, bulk marking, snooze/archive, aggregate batch notices, team
 audiences, external delivery and all public event/inbox schemas remain open. Alpha.4 and guest
 authority are unchanged.
+
+The reference host now also proves saved owner route drafts, passive checks, explicit activation
+and synthetic per-channel reservation admission. Cached enabled/placement/meter/period/route policy
+and host-owned targets bound each request; atomic SQL accounting and logical identity deduplicate
+reservations. Old pending pins do not silently follow route edits. A reserved response is not
+provider acceptance, a credential grant or evidence of sending. Real transports, bounded send workers,
+deferred automatic routing, remaining quota dimensions and backend allocation enforcement stay open.
+The next synthetic worker proof must recheck current source/route/target/policy before any transport.
 
 Public channel packages own provider-specific declarations/formatting and synthetic adapter tests.
 Use scoped host transport/secret brokers: webhook URLs and mail keys never enter routine arguments,

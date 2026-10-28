@@ -45,3 +45,9 @@ Reference host 867fb86 adds revision-checked owner read/unread presentation flag
 configure, not controlRun: task resolution, source facts and current answer authority remain separate.
 Source CI passes 131 tests/three smokes on Windows/macOS/Linux plus all 89 isolated PG18 cases.
 Existing page replies stay compatible, and alpha.4 gains no inbox, notification or guest subscription API.
+
+Reference host 57e2164 uses submit for synthetic notification reservation admission under an explicit
+active owner route. It atomically reserves a separate channel unit and retains source/route/target
+pins; its completed reply reports reservation, not sending. Source CI passes 141 tests/three smokes
+on Windows/macOS/Linux plus all 100 isolated PG18 cases. Send attempts, uncertain external outcomes and provider
+acceptance still need a worker/transport proof. Alpha.4 gains no notification schema or guest sender.

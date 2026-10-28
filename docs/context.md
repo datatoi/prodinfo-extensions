@@ -139,8 +139,21 @@ event cursor or repeat run facts. Consumer replay/new outcomes, process loss and
 the distinction between presentation state and work. Existing inbox page contracts/receipts remain
 compatible. Source CI passes 131 tests/three built smokes on Windows/macOS/Linux plus all 89
 isolated PG18 cases.
-Unread paging/counts, bulk changes, snooze/archive, team audiences, projection rebuild and delivery
-remain open. Alpha.4/artifact and guest grants are unchanged; no public inbox API or provider is added.
+Unread paging/counts, bulk changes, snooze/archive, team audiences and projection rebuild remain open.
+The next proof adds synthetic delivery admission; actual transport remains open. Alpha.4/artifact and guest grants are unchanged; no public inbox API or provider is added.
+
+## Reference host synthetic notification-admission proof
+
+Reference host 57e2164 adds immutable owner route drafts, passive checks, independent activation
+and durable reservations against separate cached channel allowances. One synthetic target reserves
+one unit; SQL accounting and logical source/owner/route identity prevent double reservation.
+Placement, target/meter, current authority and open-input checks gate new admission. Existing
+reservations retain old pins across edits and remain metadata, not a dispatch grant. Local checks
+pass 141 tests/three built smokes; source CI passes on Windows/macOS/Linux plus all 100 isolated
+PG18 cases.
+No actual transport, automatic router, worker attempts, real recipient/credential broker or backend
+plan/allocation adapter is delivered. Numeric fixture values are not commercial plans.
+Public alpha.4/artifact and guest scope are unchanged; adapters and stable notification APIs stay open.
 
 ## Notification and attention direction — proposal
 

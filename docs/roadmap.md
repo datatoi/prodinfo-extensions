@@ -59,6 +59,11 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
   snooze/archive, team audiences and delivery remain open.
   [Scope](execution-effects.md). No public run state/SDK or general workflow.
 
+Reference-host follow-up: 57e2164 proves saved owner notification routes and per-channel synthetic
+reservation admission (141 tests/three smokes on Windows/macOS/Linux plus all 100 PG18 cases pass CI).
+Atomic accounting, immutable source/route/target pins and deduplication are host responsibilities.
+A reservation is not a send or new guest authority; public notification schemas/adapters stay open.
+
 - [ ] Implement minimal strict schemas, generated author types and valid/invalid synthetic fixtures.
   Separate core metadata/public guest projection from private administration; do not publish a
   speculative complete SDK before the operations exist.

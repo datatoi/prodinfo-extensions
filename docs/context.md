@@ -71,8 +71,18 @@ Windows/macOS/Linux. Reference host 6f16218 passes 77 tests and three built smok
 plus 41 isolated PG18 cases: durable one-step admission, current activation/input pins, exclusive
 leases/capacity, takeover, broker/cache/post-flush fencing, cancel/checkpoint races and process-kill
 recovery. A worker handoff race found in initial CI has deterministic regression coverage.
-Run state/claims stay private; no automatic dispatcher, public run SDK or general workflow is added.
+Run state/claims stay private; this contract slice adds no public run SDK or general workflow.
 All actual authority/lease/cancellation checks remain host responsibilities.
+
+## Reference host dispatcher proof
+
+Reference host 11ce201 adds a bounded automatic dispatcher over the existing durable one-step queue.
+Source CI passes 85 tests and three built smokes on Windows/macOS/Linux plus
+48 isolated PostgreSQL 18 cases. Shared SQL capacity, heartbeat/cancellation, graceful drain, exact-claim
+forced interruption, blocked-page rotation and uncertain-checkpoint quarantine are exercised.
+Developer execution is opt-in, independent of HTTP/browser lifetime; no installed OS service,
+scheduler or durable waits are delivered. Public alpha.4, its source artifact and guest authority
+are unchanged. No public run projection/SDK or manifest permission is inferred from private proof.
 
 ## Accepted capture direction — design only
 

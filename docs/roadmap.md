@@ -42,7 +42,9 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
   [CI](https://github.com/datatoi/prodinfo-extensions/actions/runs/40665029899) passed at 18c1b14 on
   Windows/macOS/Linux. Reference host 6f16218 passes 77 tests/three built smokes on all three OS plus
   41 PG18 cases: durable admission/leases/capacity, broker/checkpoint fencing, cancellation, takeover,
-  exact outcomes and process-kill recovery. No automatic dispatcher or general workflow is delivered. [Scope](execution-effects.md). No public run state/SDK.
+  exact outcomes and process-kill recovery. Reference host 11ce201 now adds an opt-in automatic
+  dispatcher (85 tests/three smokes on Windows/macOS/Linux plus 48 PG18 cases); this does not expand the
+  public artifact. [Scope](execution-effects.md). No public run state/SDK or general workflow.
 
 - [ ] Implement minimal strict schemas, generated author types and valid/invalid synthetic fixtures.
   Separate core metadata/public guest projection from private administration; do not publish a

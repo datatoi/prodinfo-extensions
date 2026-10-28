@@ -23,6 +23,13 @@ accepted-job envelope. [CI](https://github.com/datatoi/prodinfo-extensions/actio
 passed at 18c1b14 on Windows/macOS/Linux. Reference host 6f16218 passes 77 tests and three built
 smokes on all three OS plus 41 isolated PG18 cases. It proves durable one-step admission/current
 pins, claims/capacity, broker/result fencing, cancellation/takeover and process-kill recovery.
-Host run schemas/claim tokens stay private; no automatic dispatcher or complete workflow is implied. No npm/marketplace publication,
+Host run schemas/claim tokens stay private; alpha.4 specifies no dispatcher or complete workflow.
+No npm/marketplace publication,
 installed service, scheduler or live provider support is added. Source is original MIT code with
 synthetic fixtures and no private checkout dependency.
+
+A later reference-host proof (11ce201) adds opt-in bounded automatic execution over those same private
+claims/checkpoints. Source CI passes 85 tests and three built smokes on Windows/macOS/Linux plus
+48 isolated PG18 cases. Shared capacity, lease heartbeat, current-security cancellation, graceful drain, exact-claim
+forced stop and uncertain checkpoint quarantine remain host duties. This does not change alpha.4
+or provide a public run SDK, scheduler, browser capture or durable human-wait API.

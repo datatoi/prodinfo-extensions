@@ -201,3 +201,10 @@ its capability becomes executable; the first minimal schema need not implement e
 Neither an SDK, signature nor successful fixtures grant capabilities. A package can supply a
 workflow only when the host actually provides its declared primitives; use an explicit external
 service boundary for unsupported integration requirements rather than privileged guest imports.
+
+
+## Executable configuration subset
+
+[Alpha.3](configuration.md) now owns a bounded flat declaration and pure checker. The broader
+manifest, config-instance lifecycle and action/transport semantics above remain proposals. This
+subset does not run validation scripts, infer authority from declarations or provide credentials.

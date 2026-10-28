@@ -29,6 +29,11 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
   synthetic pinned CSV/output proof. Guest/admin/write denial and revocation are tested.
   [Scope](resources.md). No large-file, native path, guest-write or durable-job support is implied.
 
+- [ ] E1c configuration acceptance: alpha.3 bounded flat declarative fields and pure no-I/O,
+  non-coercing checks with redacted issues. Eleven local tests/type/build/format/schema drift pass;
+  source-platform CI and exact-pin host validation/activation proof remain pending.
+  [Scope](configuration.md). No secret handling, executable hook, GUI or durable submission API.
+
 - [ ] Implement minimal strict schemas, generated author types and valid/invalid synthetic fixtures.
   Separate core metadata/public guest projection from private administration; do not publish a
   speculative complete SDK before the operations exist.

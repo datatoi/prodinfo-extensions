@@ -1,6 +1,6 @@
 # Experimental command contracts
 
-Version 0.1.0-alpha.2 is a source-level contract proof, not a published SDK or stable integration API.
+Version 0.1.0-alpha.3 is a source-level contract proof, not a published SDK or stable integration API.
 Runtime schemas are in src/index.ts; build derives declarations and `pnpm generate` updates
 schemas/*.schema.json. `pnpm check` detects drift without overwriting generated schemas.
 Use parseInvocation/parseReply/parseOperation at untrusted boundaries: structural/byte limits run
@@ -28,3 +28,10 @@ host/client operation; guest write authority is not delivered by these types. A 
 reads only for exact approved references and keep root administration private. No binary/streaming
 API, directory grant, durable job, billing wait or published npm SDK is included. See
 [resource contract](../../docs/resources.md).
+
+
+Alpha.3 adds a bounded flat ConfigurationContractSchema and pure checkConfiguration helper for
+non-secret string/number/boolean/enum/resourceRef fields. Empty/zero/false are preserved; undeclared
+fields, coercion and executable/unsupported rules are refused. Issues never include values.
+Declarations/checks grant no permission and perform no I/O/activation. Host binding and current
+scope remain mandatory. See [configuration scope](../../docs/configuration.md).

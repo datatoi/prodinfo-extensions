@@ -1,7 +1,7 @@
 # Compatibility and releases
 
-Design policy. Experimental command contracts 0.1.0-alpha.2 are source/packed artifacts only;
-no stable SDK, manifest or npm version is published. The read/configure/createArtifact and managed-text subset does not
+Design policy. Experimental command contracts 0.1.0-alpha.3 are source/packed artifacts only;
+no stable SDK, manifest or npm version is published. The read/configure/createArtifact, managed-text and flat configuration-check subset does not
 support jobs, guest packages, events or provider delivery. See [package scope](../packages/contracts/README.md).
 
 Independently version the contract package, SDK/testing packages and individual connectors/routines.

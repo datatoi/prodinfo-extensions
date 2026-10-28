@@ -5,7 +5,7 @@ Updated: 2026-10-28. Single starting handoff; [roadmap](roadmap.md) is the sole 
 ## Implemented first slice
 
 Public datatoi/prodinfo-extensions now contains the experimental source package
-`@prodinfo/extension-contracts` version `0.1.0-alpha.2` in [packages/contracts](../packages/contracts/README.md).
+`@prodinfo/extension-contracts` version `0.1.0-alpha.3` in [packages/contracts](../packages/contracts/README.md).
 It provides strict operation/invocation/result/error schemas, inferred TypeScript declarations,
 generated JSON Schema, bounded JSON validation/canonicalization and synthetic fixtures/tests.
 Read/configure/createArtifact operations and completed results/errors are executable. Alpha.2
@@ -24,7 +24,7 @@ Packing/source commits do not publish to npm, certify a marketplace package or a
 
 Node 24.x (local verification 24.1.0), pnpm 11.0.8, TypeScript 7.0.2, Zod 4.6.7 and Biome 2.6.2
 are pinned. `pnpm install --frozen-lockfile --ignore-scripts`; `pnpm check` runs formatting,
-typechecks, seven contract tests, declaration/JS build and generated-schema drift checks.
+typechecks, eleven contract tests, declaration/JS build and generated-schema drift checks.
 `pnpm generate` deliberately updates JSON Schema from source. GitHub checks are configured for
 Linux/macOS/Windows with public dependencies only. Source
 [CI](https://github.com/datatoi/prodinfo-extensions/actions/runs/40581754727) passed at 746775a
@@ -45,6 +45,16 @@ plus 21 isolated PostgreSQL 18 cases. Exact live read refs are checked before di
 before disclosure, including cached reads; missing grants deny. A synthetic CSV fixture preserves IDs/
 CRLF through retained pins and host-published separate output. No npm
 publish, guest write privilege, native directory binding or job lifecycle is implied.
+
+## Alpha.3 configuration contract section
+
+[Configuration declarations](configuration.md) add a bounded flat field grammar (string/number/
+boolean/enum/resourceRef) and a pure non-coercing checker. Required/optional and empty/zero/false are
+explicit. No arbitrary JSON Schema, regex, hooks, defaults, secret input or I/O. Issues contain only
+declared field/code and a generic undeclared-field signal. Hosts must pin declarations/checks to
+exact retained source/config content and independently enforce grants. Eleven local public tests,
+format/type/build/generated-schema drift pass. Source-platform CI and host lifecycle proof are
+pending; there is no published SDK or activation/execution API in the public package.
 
 ## Ownership and unchanged requirements
 

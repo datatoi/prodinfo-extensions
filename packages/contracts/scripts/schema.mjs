@@ -9,6 +9,8 @@ import {
   TextResourceSchema,
   CreateTextResourceSchema,
   ReadTextResourceSchema,
+  ConfigurationContractSchema,
+  ConfigurationResultSchema,
 } from "../dist/index.js";
 const root = new URL("../schemas/", import.meta.url);
 await mkdir(root, { recursive: true });
@@ -21,6 +23,8 @@ for (const [name, schema] of Object.entries({
   "text-resource": TextResourceSchema,
   "create-text-resource": CreateTextResourceSchema,
   "read-text-resource": ReadTextResourceSchema,
+  "configuration-contract": ConfigurationContractSchema,
+  "configuration-result": ConfigurationResultSchema,
 })) {
   const text = JSON.stringify(z.toJSONSchema(schema), null, 2) + "\n";
   const file = new URL(`${name}.schema.json`, root);

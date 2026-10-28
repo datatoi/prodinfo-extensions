@@ -53,3 +53,7 @@ source is included.
 
 [Alpha.2 managed text resources](docs/resources.md) add logical roots and exact text refs; no raw
 filesystem/guest-write or durable-job capability is implied.
+
+
+[Alpha.3 configuration declarations](docs/configuration.md) add a small pure schema/check subset;
+retained source/config binding, authority and activation remain host responsibilities.

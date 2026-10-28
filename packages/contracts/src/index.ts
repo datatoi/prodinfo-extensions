@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const CONTRACT_VERSION = "0.1.0-alpha.2";
+export const CONTRACT_VERSION = "0.1.0-alpha.3";
 import { assertBoundedJson } from "./json.ts";
 export { LIMITS, assertBoundedJson, canonicalJson, type Json } from "./json.ts";
 
@@ -94,3 +94,17 @@ export {
   type CreateTextResource,
   type ReadTextResource,
 } from "./resources.ts";
+
+export {
+  CONFIGURATION_LIMITS,
+  CONFIGURATION_VALIDATOR_VERSION,
+  ConfigurationKeySchema,
+  ConfigurationFieldSchema,
+  ConfigurationContractSchema,
+  ConfigurationIssueSchema,
+  ConfigurationResultSchema,
+  parseConfigurationContract,
+  checkConfiguration,
+  type ConfigurationContract,
+  type ConfigurationResult,
+} from "./configuration.ts";

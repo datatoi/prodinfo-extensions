@@ -22,9 +22,14 @@ The reference host now also proves saved owner route drafts, passive checks, exp
 and synthetic per-channel reservation admission. Cached enabled/placement/meter/period/route policy
 and host-owned targets bound each request; atomic SQL accounting and logical identity deduplicate
 reservations. Old pending pins do not silently follow route edits. A reserved response is not
-provider acceptance, a credential grant or evidence of sending. Real transports, bounded send workers,
-deferred automatic routing, remaining quota dimensions and backend allocation enforcement stay open.
-The next synthetic worker proof must recheck current source/route/target/policy before any transport.
+provider acceptance, a credential grant or evidence of sending. The reference host now also proves
+a bounded synthetic worker with DB-clock claims, a pre-transport marker, current source/route/target/
+policy checks and durable accepted/rejected/uncertain evidence. Only known nonacceptance retries;
+uncertainty holds its unit for reviewed synthetic reconciliation. Pre-dispatch cancellation is
+distinct from recovering an expired lease; admission snapshots remain unchanged while a separate
+status query reports actual progress. Process-kill windows and quota settlement are exercised.
+Real transports, automatic deferred routing, remaining quota dimensions and backend allocation
+enforcement stay open. Synthetic acceptance is not live-provider or human-delivery evidence.
 
 Public channel packages own provider-specific declarations/formatting and synthetic adapter tests.
 Use scoped host transport/secret brokers: webhook URLs and mail keys never enter routine arguments,

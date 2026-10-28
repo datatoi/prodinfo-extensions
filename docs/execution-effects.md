@@ -51,3 +51,11 @@ active owner route. It atomically reserves a separate channel unit and retains s
 pins; its completed reply reports reservation, not sending. Source CI passes 141 tests/three smokes
 on Windows/macOS/Linux plus all 100 isolated PG18 cases. Send attempts, uncertain external outcomes and provider
 acceptance still need a worker/transport proof. Alpha.4 gains no notification schema or guest sender.
+
+Reference host a8d6f12 uses controlRun for owner cancellation, expired-lease recovery and reviewed
+synthetic uncertainty reconciliation. Actual delivery-attempt status is distinct from an immutable
+admission reply. Known rejection may retry; missing/ambiguous acceptance never implies permission
+to resend or refund. Source CI passes 157 tests/three smokes on Windows/macOS/Linux plus all 114
+isolated PG18 cases.
+The public artifact and guest grants remain unchanged; there is no released notification SDK,
+provider transport or exactly-once external delivery guarantee.

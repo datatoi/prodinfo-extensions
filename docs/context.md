@@ -151,9 +151,23 @@ Placement, target/meter, current authority and open-input checks gate new admiss
 reservations retain old pins across edits and remain metadata, not a dispatch grant. Local checks
 pass 141 tests/three built smokes; source CI passes on Windows/macOS/Linux plus all 100 isolated
 PG18 cases.
-No actual transport, automatic router, worker attempts, real recipient/credential broker or backend
-plan/allocation adapter is delivered. Numeric fixture values are not commercial plans.
+That admission slice delivered no actual transport, automatic router, worker attempts or backend
+plan/allocation adapter. The next proof adds synthetic attempts only. Numeric fixture values are not commercial plans.
 Public alpha.4/artifact and guest scope are unchanged; adapters and stable notification APIs stay open.
+
+## Reference host synthetic delivery-worker proof
+
+Reference host a8d6f12 adds DB-clock attempt leases, a durable dispatch marker, current dispatch
+checks, bounded known-rejection retries and conservative uncertain outcomes. Held/spent/released
+accounting follows the attempt/evidence transaction. Owner status/control/recovery and reviewed
+synthetic reconciliation remain separate from workflow input and admission snapshots.
+Source CI passes 157 tests/three built smokes on Windows/macOS/Linux plus all 114 isolated PG18 cases.
+Killed-host proofs
+cover undispatched, potentially accepted and checkpointed acceptance windows with a local fixture
+ledger; worker tokens stay private. The opt-in developer executor uses simulated transport only.
+Automatic routing, real secret/recipient/disclosure brokers, provider evidence, cross-install limits
+and live adapters remain open. Public alpha.4/artifact/guest grants are unchanged; no notification
+SDK or real external delivery is released.
 
 ## Notification and attention direction — proposal
 

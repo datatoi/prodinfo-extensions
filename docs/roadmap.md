@@ -64,6 +64,11 @@ reservation admission (141 tests/three smokes on Windows/macOS/Linux plus all 10
 Atomic accounting, immutable source/route/target pins and deduplication are host responsibilities.
 A reservation is not a send or new guest authority; public notification schemas/adapters stay open.
 
+Reference host a8d6f12 adds synthetic attempt/dispatch/recovery and held/spent/released settlement
+(157 tests/three smokes on Windows/macOS/Linux plus all 114 PG18 cases pass CI). Known rejection can retry;
+uncertain acceptance requires reviewed reconciliation. Automatic routing and real transports/
+secret/recipient/disclosure brokers remain open; the public artifact is unchanged.
+
 - [ ] Implement minimal strict schemas, generated author types and valid/invalid synthetic fixtures.
   Separate core metadata/public guest projection from private administration; do not publish a
   speculative complete SDK before the operations exist.

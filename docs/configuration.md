@@ -40,5 +40,9 @@ a separately authorized action once a transport broker exists. Failed checks ret
 Eleven public tests plus format/type/build/schema drift pass locally, including four new cases for
 preserved values, non-coercion/redacted issues, bad declarations/bounds and hostile JSON. Public
 [three-platform CI](https://github.com/datatoi/prodinfo-extensions/actions/runs/40658646831) passed
-at 15e2e88 on Windows/macOS/Linux. Matching host lifecycle proof is pending. No npm package or marketplace
-release is published by this source change; build/test requires only public dependencies/fixtures.
+at 15e2e88 on Windows/macOS/Linux. Reference host 220709f passes 59 tests and two built smoke paths
+on all three OS plus 30 PG18 cases. It proves exact immutable bindings/checks, independent activation
+CAS/history, explicit input ownership/digests, expiry, actor/tenant denial, rollback, corruption and
+reopen. Activation records still require future current-authority execution admission; no run route
+is supplied by these declarations. No npm package or marketplace release is published by this source
+change; public build/test requires only public dependencies/fixtures.

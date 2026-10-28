@@ -54,7 +54,11 @@ explicit. No arbitrary JSON Schema, regex, hooks, defaults, secret input or I/O.
 declared field/code and a generic undeclared-field signal. Hosts must pin declarations/checks to
 exact retained source/config content and independently enforce grants. Eleven local public tests,
 format/type/build/generated-schema drift pass. [CI](https://github.com/datatoi/prodinfo-extensions/actions/runs/40658646831)
-passed at 15e2e88 on Windows/macOS/Linux; matching host lifecycle proof is pending. there is no published SDK or activation/execution API in the public package.
+passed at 15e2e88 on Windows/macOS/Linux. Reference host 220709f passes 59 tests and two built smoke
+paths on all three OS plus 30 isolated PG18 cases. It binds immutable declarations/checks to exact
+source/config hashes, records independent activation CAS/history and verifies explicit owned input
+refs. Edits/checks do not silently activate. Activation records do not provide execution admission.
+There is no published SDK or activation/execution API in the public package.
 
 ## Ownership and unchanged requirements
 

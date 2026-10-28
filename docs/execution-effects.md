@@ -19,6 +19,7 @@ submission as configure or assume it is safe to retry with a different request i
 
 Thirteen public tests/type/build/format/generated-schema checks pass locally. The two added cases
 cover explicit effects and the distinction between admission result data and an unsupported
-accepted-job envelope. Source-platform and host proof are pending. No npm/marketplace publication,
+accepted-job envelope. [CI](https://github.com/datatoi/prodinfo-extensions/actions/runs/40665029899)
+passed at 18c1b14 on Windows/macOS/Linux; matching host proof is pending. No npm/marketplace publication,
 installed service, scheduler or live provider support is added. Source is original MIT code with
 synthetic fixtures and no private checkout dependency.

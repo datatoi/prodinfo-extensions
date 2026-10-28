@@ -65,8 +65,9 @@ There is no published SDK or activation/execution API in the public package.
 [Execution effects](execution-effects.md) distinguish durable submit and controlRun from read,
 configure and createArtifact. The completed reply envelope is unchanged: queued-run admission may
 be result data, not final run completion; no top-level accepted/job variant or public run projection
-is added. Thirteen local public tests/type/build/schema drift pass. Source-platform/host proof is
-pending. All actual authority/lease/cancellation checks remain host responsibilities.
+is added. Thirteen local public tests/type/build/schema drift pass.
+[CI](https://github.com/datatoi/prodinfo-extensions/actions/runs/40665029899) passed at 18c1b14 on
+Windows/macOS/Linux; matching host proof is pending. All actual authority/lease/cancellation checks remain host responsibilities.
 
 ## Ownership and unchanged requirements
 

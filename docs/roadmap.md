@@ -44,7 +44,9 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
   41 PG18 cases: durable admission/leases/capacity, broker/checkpoint fencing, cancellation, takeover,
   exact outcomes and process-kill recovery. Reference host 11ce201 now adds an opt-in automatic
   dispatcher (85 tests/three smokes on Windows/macOS/Linux plus 48 PG18 cases); this does not expand the
-  public artifact. [Scope](execution-effects.md). No public run state/SDK or general workflow.
+  public artifact. Reference host 6d0212d adds one durable owner-only text checkpoint (96 tests/
+  three smokes on Windows/macOS/Linux plus 56 PG18 cases). Independent two-item batch conformance remains open.
+  [Scope](execution-effects.md). No public run state/SDK or general workflow.
 
 - [ ] Implement minimal strict schemas, generated author types and valid/invalid synthetic fixtures.
   Separate core metadata/public guest projection from private administration; do not publish a

@@ -115,3 +115,10 @@ dependency. A fixture engine or view alone does not establish durable behavior.
 [Browser capture proposal](browser-capture.md) is a concrete input-task use case at workflow start
 or mid-run. Share an approved resource reference; keep session access as a separate host-held grant.
 Local-only must reach model/runner/log/backup boundaries. This does not add executable alpha.4 fields.
+
+Reference host 6d0212d now proves one private owner-only text checkpoint, exact-revision answers,
+release of VM/worker/SQL while waiting, and fresh-VM continuation after a real host kill. Local
+96-test/three-built-smoke checks pass; source CI also passes on Windows/macOS/Linux plus all 56 PG18
+cases. This foundation does not
+close the independent two-item batch/partial-result gate above or define stable public task fields.
+One text answer is not browser-session sharing, a credential grant or captured-page disclosure.

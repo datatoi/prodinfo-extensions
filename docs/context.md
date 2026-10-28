@@ -81,8 +81,18 @@ Source CI passes 85 tests and three built smokes on Windows/macOS/Linux plus
 48 isolated PostgreSQL 18 cases. Shared SQL capacity, heartbeat/cancellation, graceful drain, exact-claim
 forced interruption, blocked-page rotation and uncertain-checkpoint quarantine are exercised.
 Developer execution is opt-in, independent of HTTP/browser lifetime; no installed OS service,
-scheduler or durable waits are delivered. Public alpha.4, its source artifact and guest authority
+scheduler or durable waits were delivered by that slice. Public alpha.4, its source artifact and guest authority
 are unchanged. No public run projection/SDK or manifest permission is inferred from private proof.
+
+## Reference host input-checkpoint proof
+
+Reference host 6d0212d adds one owner-only durable text-input checkpoint to its existing run engine.
+The declaration/source pins, checkpoint and answer survive host loss; a new VM resumes from retained
+state with no worker/SQL held while waiting. Revisions/current authority fence answers; deadlines,
+cancellation, bounded per-phase recovery and uncertain acknowledgements retain explicit outcomes.
+Source CI passes 96 tests and three built smokes on Windows/macOS/Linux plus all 56 isolated PG18 cases.
+Independent batch items and the complete two-item conformance gate remain open. This is a private
+experimental host protocol, not a new public alpha.4 schema/SDK, capture task or generic form API.
 
 ## Accepted capture direction — design only
 
@@ -90,7 +100,8 @@ are unchanged. No public run projection/SDK or manifest permission is inferred f
 separate continued-browser grants. Session credentials remain host-held. Local-only applies to
 cloud AI, remote runners, logs/support and backups as well as sync/export; explicit scoped transfer
 may permit selected data without sharing the browser session. No alpha.4 runtime/SDK change or
-capture/disclosure enforcement is added. Durable waits and larger artifacts must be proven first.
+capture/disclosure enforcement is added. The text-checkpoint foundation now exists; capture-specific
+task refs/disclosure checks and larger artifacts still need proof.
 
 ## Ownership and unchanged requirements
 

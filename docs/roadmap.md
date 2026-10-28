@@ -50,7 +50,10 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
   Windows/macOS/Linux and all 65 PG18 cases pass CI). Broader public author/workflow conformance remains open. Reference host dfa46a7 adds owner
   attention discovery with live scoped cursors and advisory controls (114 local tests/three smokes;
   Windows/macOS/Linux and all 72 PG18 cases pass CI). This is private operator proof, not a public
-  attention SDK.
+  attention SDK. Reference host 32bb001 now adds transactional run facts and a durable owner inbox
+  consumer (124 tests/three smokes on Windows/macOS/Linux plus all 82 PG18 cases pass CI), with process-kill
+  recovery and no invented historical-event backfill. Public event/inbox schemas and external
+  delivery remain open; alpha.4 is unchanged.
   [Scope](execution-effects.md). No public run state/SDK or general workflow.
 
 - [ ] Implement minimal strict schemas, generated author types and valid/invalid synthetic fixtures.

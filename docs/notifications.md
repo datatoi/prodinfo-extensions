@@ -9,8 +9,11 @@ transactional outbox and channel delivery receipts. Opening/dismissing a notice 
 input task or approves work. Required attention remains discoverable when external sending fails
 or exceeds a plan allowance. Completion summaries distinguish partial outcomes from full success.
 Current audience/source revisions govern every control; a message, manifest or webhook grants no
-command authority. Bounded private item batches and owner open-input discovery are now proven;
-per-user inbox state, outbox and notification conformance remain open.
+command authority. The reference host now proves private item batches, live owner attention and
+transactional run facts with a bounded durable owner-notice consumer. Its historical notices recheck
+current task resolution; existing waiting work stays discoverable without fabricated event backfill.
+Per-user read state, aggregate batch notices, team audiences, external-delivery conformance and all
+public event/inbox schemas remain open. Alpha.4 and guest authority are unchanged.
 
 Public channel packages own provider-specific declarations/formatting and synthetic adapter tests.
 Use scoped host transport/secret brokers: webhook URLs and mail keys never enter routine arguments,

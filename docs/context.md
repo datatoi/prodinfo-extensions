@@ -116,7 +116,20 @@ or disclose input/checkpoint/answer/result bodies. Local checks pass 114 tests a
 smokes. Source CI passes on Windows/macOS/Linux plus all 72 isolated PG18 cases. The index-only
 schema migration preserves
 source facts/receipts. The private paged catalog has 34 operations; alpha.4/artifact and guest grants
-are unchanged. Read state, outbox, external notifications and UI remain unimplemented.
+are unchanged. Read state, outbox, external notifications and UI were absent in this earlier slice;
+the transactional inbox proof below supersedes its outbox status.
+
+## Reference host transactional inbox proof
+
+Reference host 32bb001 records hash-bound run-transition facts atomically with source changes and
+consumes committed workspace order into owner input-needed/terminal-update notices. A durable bounded
+checkpoint survives restart and concurrent consumers; historical attention notices recheck current
+task resolution without answering it. Source CI passes 124 tests/three built smokes on
+Windows/macOS/Linux plus all 82 isolated PG18 cases. A killed host retains notices and resumes only its waiting batch item.
+Schema migration preserves prior work/receipts without fabricating old notification events; live
+attention still discovers old waiting work. Read state, aggregate batch notices, team audiences,
+external delivery, UI and broader tracing remain open. Alpha.4/artifact and guest grants are unchanged.
+No public event/inbox SDK, package publication or provider send is added.
 
 ## Notification and attention direction — proposal
 

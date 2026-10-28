@@ -33,3 +33,10 @@ claims/checkpoints. Source CI passes 85 tests and three built smokes on Windows/
 48 isolated PG18 cases. Shared capacity, lease heartbeat, current-security cancellation, graceful drain, exact-claim
 forced stop and uncertain checkpoint quarantine remain host duties. This does not change alpha.4
 or provide a public run SDK, scheduler, browser capture or durable human-wait API.
+
+Reference host 32bb001 now adds private transactional run facts and a restart-safe owner inbox
+consumer over the same run engine. A notice describes a committed transition, not delivery, approval
+or a grant to control work. Historical input notices recheck source resolution; live attention supplies
+current form/control refs. Source CI passes 124 tests/three smokes on Windows/macOS/Linux plus all
+82 isolated PG18 cases.
+No event/inbox schema, channel adapter or guest subscription capability is added to alpha.4.

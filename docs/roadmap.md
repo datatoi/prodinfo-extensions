@@ -31,7 +31,8 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
 
 - [ ] E1c configuration acceptance: alpha.3 bounded flat declarative fields and pure no-I/O,
   non-coercing checks with redacted issues. Eleven local tests/type/build/format/schema drift pass;
-  source-platform CI and exact-pin host validation/activation proof remain pending.
+  [CI](https://github.com/datatoi/prodinfo-extensions/actions/runs/40658646831) passed at 15e2e88 on
+  Windows/macOS/Linux. Exact-pin host validation/activation proof remains pending.
   [Scope](configuration.md). No secret handling, executable hook, GUI or durable submission API.
 
 - [ ] Implement minimal strict schemas, generated author types and valid/invalid synthetic fixtures.

@@ -53,8 +53,8 @@ boolean/enum/resourceRef) and a pure non-coercing checker. Required/optional and
 explicit. No arbitrary JSON Schema, regex, hooks, defaults, secret input or I/O. Issues contain only
 declared field/code and a generic undeclared-field signal. Hosts must pin declarations/checks to
 exact retained source/config content and independently enforce grants. Eleven local public tests,
-format/type/build/generated-schema drift pass. Source-platform CI and host lifecycle proof are
-pending; there is no published SDK or activation/execution API in the public package.
+format/type/build/generated-schema drift pass. [CI](https://github.com/datatoi/prodinfo-extensions/actions/runs/40658646831)
+passed at 15e2e88 on Windows/macOS/Linux; matching host lifecycle proof is pending. there is no published SDK or activation/execution API in the public package.
 
 ## Ownership and unchanged requirements
 

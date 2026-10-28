@@ -32,7 +32,7 @@ test("resource boundaries preserve Unicode/BOM/CRLF, literal IDs, NUL and exact 
 });
 test("untrusted resource payloads reject native paths, forged scope, malformed Unicode and excessive bytes", () => {
   const base = { rootId, name: "input.csv", mediaType: "text/csv", text: "id\r\n001\r\n" };
-  for (const name of ["../escape", "..", ".", "a/b", "a\\b", "line\nname"])
+  for (const name of ["../escape", "..", ".", "a/b", "a\\b", "line\nname", "\ud800", "\udc00"])
     assert.throws(() => parseCreateTextResource({ ...base, name }));
   for (const text of ["x".repeat(8193), "é".repeat(4097), "\ud800", "\udc00"])
     assert.throws(() => parseCreateTextResource({ ...base, text }));

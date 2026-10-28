@@ -12,7 +12,14 @@ export const ResourceNameSchema = z
   .min(1)
   .max(120)
   .regex(/^[^/\\\u0000-\u001f\u007f]+$/u)
-  .refine((value) => value !== "." && value !== "..", "A display name cannot be a path component");
+  .refine((value) => value !== "." && value !== "..", "A display name cannot be a path component")
+  .refine(
+    (value) =>
+      new TextDecoder("utf-8", { fatal: true, ignoreBOM: true }).decode(
+        new TextEncoder().encode(value),
+      ) === value,
+    "Display names must round-trip as UTF-8",
+  );
 export const ResourceRootSchema = z.strictObject({
   rootId: z.uuid(),
   name: z

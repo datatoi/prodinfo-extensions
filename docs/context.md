@@ -74,6 +74,12 @@ admission; no external entitlement check per task. Hosted AI calls use an accoun
 reservations and trusted token-based settlement, including console, enrichment and child routines.
 Token usage and credit charges differ; rates/grants and financial precision belong to the platform.
 
+Credit admission is now proposed as soft estimates plus finite approved tolerance, with strict
+maximum authorization for explicit hard spending caps. Ordinary credit/accounting shortage should
+checkpoint/wait and resume, preserving completed items/results and pending settlement. An admitted
+bounded call is not killed solely for crossing its estimate; retries must not duplicate AI calls or
+charges. This does not relax tenant/credential authority or executor/resource caps.
+
 These are host/platform responsibilities. A package purchase/free status/certification grants no
 filesystem/network/admin capability. Package limits, budget/availability and expired-rights outcomes
 need executable public conformance before new SDK shapes. Same author contract should work locally

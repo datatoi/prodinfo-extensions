@@ -103,6 +103,9 @@ its metered gateway; no guest-supplied token count can create a charge or enlarg
 Free/open-source, paid and certified packages use the same capability and sandbox rules. Commercial
 availability, download/update rights and runtime activation/grants are separate; purchase never
 auto-activates a version. Expired/insufficient budget outcomes need explicit availability/recovery
-semantics when the corresponding public schema becomes executable. No plan/payment/backup API is
+semantics when the corresponding public schema becomes executable. Ordinary credit/accounting
+shortage should checkpoint/wait/resume without discarding results or crashing the process; admitted
+bounded calls may finish under finite tolerance. Strict spending/security caps remain explicit.
+No plan/payment/backup API is
 part of alpha.1. Subscription provisioning and accounting implementation stay with the platform,
 not in uploaded packages or a required private build dependency.

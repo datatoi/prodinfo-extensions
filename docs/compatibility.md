@@ -33,7 +33,10 @@ workspace/attempt/model budgets. Those rights grant no new capability and do not
 code/config pin automatically. A package must tolerate denied/unavailable resources and keep
 uncertain effects explicit. Credit accounting uses trusted provider usage and idempotent host
 reservations/settlement, not diagnostic messages or a guest-edited balance. Exact schema/error
-variants require public/host conformance; none is added to alpha.1 by this proposal.
+variants require public/host conformance. Soft estimated credit holds may have finite approved
+tolerance; explicit hard caps use strict authorization. Budget/accounting waits must preserve
+completed results, let admitted bounded calls finish and resume without repeated provider calls
+or charges. No runtime schema change is added to alpha.1 by this proposal.
 
 The SDK and official open-source integration source remain public. Paid offerings can have separate
 distribution/licensing; do not mix separately licensed source into the repository's MIT material.

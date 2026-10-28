@@ -56,6 +56,8 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
   As durable work is introduced, add [execution/interaction](routine-execution.md) schemas and
   two-item wait/host-restart/answer/resume conformance. Cover unknown totals, per-item outcomes,
   stale/duplicate/cancelled answers and current authority without holding a VM or DB transaction.
+  Include [operator capture](browser-capture.md) task/source pins and local-only disclosure; no
+  session cookies/credentials in guest data or inline oversized page capture.
 - [ ] Validate against the first real headless core; keep package/config/activation/run identity and
   external uncertainty explicit. Establish public CI and versioned artifacts only when executable.
   Add lifecycle/recovery conformance as capabilities enter the schema: removal/migration failure,

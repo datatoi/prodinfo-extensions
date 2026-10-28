@@ -74,6 +74,14 @@ recovery. A worker handoff race found in initial CI has deterministic regression
 Run state/claims stay private; no automatic dispatcher, public run SDK or general workflow is added.
 All actual authority/lease/cancellation checks remain host responsibilities.
 
+## Accepted capture direction — design only
+
+[Capture proposal](browser-capture.md) records start/mid-run durable operator capture tasks and
+separate continued-browser grants. Session credentials remain host-held. Local-only applies to
+cloud AI, remote runners, logs/support and backups as well as sync/export; explicit scoped transfer
+may permit selected data without sharing the browser session. No alpha.4 runtime/SDK change or
+capture/disclosure enforcement is added. Durable waits and larger artifacts must be proven first.
+
 ## Ownership and unchanged requirements
 
 This repository owns public schemas/SDK/helpers, mocks/conformance, synthetic examples and all new

@@ -110,3 +110,8 @@ retry. Verify cancelled tasks cannot resume work, changed-code follow-ups do not
 and a lost provider acknowledgement does not become an unconditional resend. Test a plain one-step
 routine and an interactive batch through the same host, without a package-specific UI or Records
 dependency. A fixture engine or view alone does not establish durable behavior.
+
+
+[Browser capture proposal](browser-capture.md) is a concrete input-task use case at workflow start
+or mid-run. Share an approved resource reference; keep session access as a separate host-held grant.
+Local-only must reach model/runner/log/backup boundaries. This does not add executable alpha.4 fields.

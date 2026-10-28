@@ -1,6 +1,6 @@
 # Experimental command contracts
 
-Version 0.1.0-alpha.3 is a source-level contract proof, not a published SDK or stable integration API.
+Version 0.1.0-alpha.4 is a source-level contract proof, not a published SDK or stable integration API.
 Runtime schemas are in src/index.ts; build derives declarations and `pnpm generate` updates
 schemas/*.schema.json. `pnpm check` detects drift without overwriting generated schemas.
 Use parseInvocation/parseReply/parseOperation at untrusted boundaries: structural/byte limits run
@@ -35,3 +35,9 @@ non-secret string/number/boolean/enum/resourceRef fields. Empty/zero/false are p
 fields, coercion and executable/unsupported rules are refused. Issues never include values.
 Declarations/checks grant no permission and perform no I/O/activation. Host binding and current
 scope remain mandatory. See [configuration scope](../../docs/configuration.md).
+
+
+Alpha.4 adds submit/controlRun operation effects. A command result describing queued admission is
+not a completed run. The reply envelope is unchanged; top-level accepted/job variants remain
+unsupported. See [execution effects](../../docs/execution-effects.md). Host authority and durable
+claim/result fencing are mandatory; these metadata labels grant no guest execution privilege.

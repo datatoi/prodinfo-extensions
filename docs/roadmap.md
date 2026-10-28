@@ -37,6 +37,10 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
   current policy/actor denial, corruption/rollback and migration/reopen. Execution admission is later.
   [Scope](configuration.md). No secret handling, executable hook, GUI or durable submission API.
 
+- [ ] E1d execution-effect acceptance: alpha.4 submit/controlRun metadata with unchanged completed
+  reply envelope, thirteen local tests/type/build/format/schema drift. Source-platform and durable
+  host admission/fencing proof are pending. [Scope](execution-effects.md). No public run state/SDK.
+
 - [ ] Implement minimal strict schemas, generated author types and valid/invalid synthetic fixtures.
   Separate core metadata/public guest projection from private administration; do not publish a
   speculative complete SDK before the operations exist.

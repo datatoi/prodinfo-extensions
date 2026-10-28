@@ -1,8 +1,9 @@
 # Extension and core boundary — contract draft for review
 
 Draft 0, 27 October 2026. Broader review proposal, not a published SDK or stable wire protocol.
-The [executable subset](../packages/contracts/README.md), `0.1.0-alpha.2`, covers read/configure/
-createArtifact operations, managed text-resource shapes, invocations and completed results/errors. Its source owns those actual shapes/limits.
+The [executable subset](../packages/contracts/README.md), `0.1.0-alpha.4`, covers read/configure/
+createArtifact/submit/controlRun operations, managed text resources, flat configuration checks,
+invocations and completed results/errors. Its source owns those actual shapes/limits.
 Package/action/job/state/event sketches below remain illustrative and unimplemented; in particular,
 the accepted-job reply and broader effect/recovery variants below are not in the first subset.
 HTTP paths, operation IDs, package names and release versions are intentionally not fixed here.

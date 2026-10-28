@@ -5,7 +5,7 @@ Updated: 2026-10-28. Single starting handoff; [roadmap](roadmap.md) is the sole 
 ## Implemented first slice
 
 Public datatoi/prodinfo-extensions now contains the experimental source package
-`@prodinfo/extension-contracts` version `0.1.0-alpha.3` in [packages/contracts](../packages/contracts/README.md).
+`@prodinfo/extension-contracts` version `0.1.0-alpha.4` in [packages/contracts](../packages/contracts/README.md).
 It provides strict operation/invocation/result/error schemas, inferred TypeScript declarations,
 generated JSON Schema, bounded JSON validation/canonicalization and synthetic fixtures/tests.
 Read/configure/createArtifact operations and completed results/errors are executable. Alpha.2
@@ -24,7 +24,7 @@ Packing/source commits do not publish to npm, certify a marketplace package or a
 
 Node 24.x (local verification 24.1.0), pnpm 11.0.8, TypeScript 7.0.2, Zod 4.6.7 and Biome 2.6.2
 are pinned. `pnpm install --frozen-lockfile --ignore-scripts`; `pnpm check` runs formatting,
-typechecks, eleven contract tests, declaration/JS build and generated-schema drift checks.
+typechecks, thirteen contract tests, declaration/JS build and generated-schema drift checks.
 `pnpm generate` deliberately updates JSON Schema from source. GitHub checks are configured for
 Linux/macOS/Windows with public dependencies only. Source
 [CI](https://github.com/datatoi/prodinfo-extensions/actions/runs/40581754727) passed at 746775a
@@ -59,6 +59,14 @@ paths on all three OS plus 30 isolated PG18 cases. It binds immutable declaratio
 source/config hashes, records independent activation CAS/history and verifies explicit owned input
 refs. Edits/checks do not silently activate. Activation records do not provide execution admission.
 There is no published SDK or activation/execution API in the public package.
+
+## Alpha.4 execution-effect metadata
+
+[Execution effects](execution-effects.md) distinguish durable submit and controlRun from read,
+configure and createArtifact. The completed reply envelope is unchanged: queued-run admission may
+be result data, not final run completion; no top-level accepted/job variant or public run projection
+is added. Thirteen local public tests/type/build/schema drift pass. Source-platform/host proof is
+pending. All actual authority/lease/cancellation checks remain host responsibilities.
 
 ## Ownership and unchanged requirements
 

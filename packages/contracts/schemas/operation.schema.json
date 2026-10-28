@@ -28,7 +28,9 @@
       "enum": [
         "read",
         "configure",
-        "createArtifact"
+        "createArtifact",
+        "submit",
+        "controlRun"
       ]
     },
     "requiredCapabilities": {

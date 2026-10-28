@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const CONTRACT_VERSION = "0.1.0-alpha.3";
+export const CONTRACT_VERSION = "0.1.0-alpha.4";
 import { assertBoundedJson } from "./json.ts";
 export { LIMITS, assertBoundedJson, canonicalJson, type Json } from "./json.ts";
 
@@ -20,7 +20,7 @@ export const OperationSchema = z.strictObject({
   version,
   title: z.string().min(1).max(100),
   description: z.string().min(1).max(1000),
-  effect: z.enum(["read", "configure", "createArtifact"]),
+  effect: z.enum(["read", "configure", "createArtifact", "submit", "controlRun"]),
   requiredCapabilities: z.array(id).max(20),
   automation: z.strictObject({ delegable: z.boolean() }),
   inputSchema: schema,

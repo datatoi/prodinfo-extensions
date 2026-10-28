@@ -74,6 +74,11 @@ and durable policy/quota deferral. Source CI passes 170 tests/three smokes on Wi
 plus all 126 isolated PG18 cases. Automatic origin fences preserve manual deduplication ownership on disable/rebind.
 No public contract change, notification SDK, provider transport or package release is included.
 
+Reference host a617f36 adds scoped synthetic transport/private-value confinement and attempt-bound
+redacted evidence with atomic settlement. Source CI passes 180 tests/three built checks on
+Windows/macOS/Linux plus all 135 isolated PG18 cases. Production credential/recipient onboarding, verified adapter
+execution and real transport/disclosure/evidence remain open; alpha.4 and guest scope are unchanged.
+
 - [ ] Implement minimal strict schemas, generated author types and valid/invalid synthetic fixtures.
   Separate core metadata/public guest projection from private administration; do not publish a
   speculative complete SDK before the operations exist.

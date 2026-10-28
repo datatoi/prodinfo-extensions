@@ -183,6 +183,18 @@ The PG suite now has 126 cases, including capture/admission, disable and source-
 Public alpha.4/artifact/guest grants are unchanged. No notification schema, sender SDK, real channel,
 secret/recipient/disclosure broker, retention service or external delivery is released.
 
+## Reference host scoped synthetic transport proof
+
+Reference host a617f36 adds exact target-bound trusted adapter/private recipient/credential access,
+an explicit reference-metadata disclosure profile and one-shot transport scopes. Current roles,
+bindings, expiry and abort fence private access. Raw credentials/recipients/errors/receipts stay
+outside operator/routine output; opaque attempt evidence and quota settle atomically. Old accepted
+work does not acquire invented evidence, and restart retains new evidence without restoring secrets.
+Source CI passes 180 tests/three built checks on Windows/macOS/Linux plus all 135 isolated PG18 cases.
+Migration, killed-process recovery, actual host/built JS and a new pool race cover the boundary.
+This is dummy in-memory trusted setup, not a production vault, verified uploaded-adapter loader,
+real provider, public notification/secret schema or SDK release. Alpha.4/artifact/guest grants remain unchanged.
+
 ## Notification and attention direction — proposal
 
 [Notification design](notifications.md) adds configurable Discord and future platform EmailService

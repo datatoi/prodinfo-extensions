@@ -65,3 +65,10 @@ future-event routing. Deferred admission has no reserved unit; admitted request 
 separate delivery-attempt truth. Changing automation cannot redirect retained pins or take control
 of a manually deduplicated delivery. Source CI passes 170 tests/three smokes on Windows/macOS/Linux
 plus all 126 isolated PG18 cases. Alpha.4 gains no notification API or additional guest capabilities.
+
+Reference host a617f36 adds safe private operator inspection of scoped synthetic transport and
+retained attempt evidence. Current roles/binding/expiry fence private access; copied or cross-claim
+receipts cannot checkpoint and late acceptance cannot overwrite uncertainty. Quota/outcome/evidence
+commit together. Source CI passes 180 tests/three built checks on Windows/macOS/Linux plus all 135
+isolated PG18 cases. No production secret vault, public sender/secret API, uploaded-adapter privilege
+or real external acceptance is released. The public artifact and guest grants stay unchanged.

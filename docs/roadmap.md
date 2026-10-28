@@ -21,10 +21,12 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
   typecheck/build/schema drift checks; public-only Windows/macOS/Linux source CI passed at 746775a.
   The private host consumes a packed pinned artifact and exercises this subset; E1 stays open below.
 
-- [ ] E1b platform/host acceptance: alpha.2 managed text root/ref/create/read schemas, createArtifact
+- [x] E1b platform/host acceptance: alpha.2 managed text root/ref/create/read schemas, createArtifact
   effect and resource-limit/unavailable outcomes. Seven local contract tests/type/build/format/schema
   drift pass; [CI](https://github.com/datatoi/prodinfo-extensions/actions/runs/40653044117) passed at
-  46d54fc on Windows/macOS/Linux. Matching host namespace/quota/guest proof remains pending.
+  46d54fc on Windows/macOS/Linux. Reference host 2ecd1d4 passes 49 tests and two built smoke paths
+  on all three OS plus 21 PG18 cases: namespace/quota/transaction/replay, exact-ref reads and a
+  synthetic pinned CSV/output proof. Guest/admin/write denial and revocation are tested.
   [Scope](resources.md). No large-file, native path, guest-write or durable-job support is implied.
 
 - [ ] Implement minimal strict schemas, generated author types and valid/invalid synthetic fixtures.

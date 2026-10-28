@@ -36,7 +36,7 @@ reservations/settlement, not diagnostic messages or a guest-edited balance. Exac
 variants require public/host conformance. Soft estimated credit holds may have finite approved
 tolerance; explicit hard caps use strict authorization. Budget/accounting waits must preserve
 completed results, let admitted bounded calls finish and resume without repeated provider calls
-or charges. No runtime schema change is added to alpha.1 by this proposal.
+or charges. This billing proposal adds no runtime schema change.
 
 The SDK and official open-source integration source remain public. Paid offerings can have separate
 distribution/licensing; do not mix separately licensed source into the repository's MIT material.

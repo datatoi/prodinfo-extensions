@@ -40,7 +40,10 @@ byte-count mismatch fail. JSON helpers were split into a dependency module so re
 share them without a module cycle. Local seven-test/type/build/format/schema drift checks pass.
 [Alpha.2 CI](https://github.com/datatoi/prodinfo-extensions/actions/runs/40653044117) passed at
 46d54fc: seven tests/type/build/schema checks on Windows/macOS/Linux. Matching host namespace/quota
-proof is being validated; guest access remains pending. No npm
+proof passed: reference host 2ecd1d4 has 49 tests and two built smoke paths on Windows/macOS/Linux,
+plus 21 isolated PostgreSQL 18 cases. Exact live read refs are checked before dispatch and after await
+before disclosure, including cached reads; missing grants deny. A synthetic CSV fixture preserves IDs/
+CRLF through retained pins and host-published separate output. No npm
 publish, guest write privilege, native directory binding or job lifecycle is implied.
 
 ## Ownership and unchanged requirements
@@ -75,7 +78,7 @@ releases execution capacity; one item's question need not block unrelated items 
 Every routine gets standard progress/attention/recovery views. Optional declarative cards/tables/
 forms/actions extend a routine home page; uploaded React/JS is excluded from trusted UI. Fully custom
 executable views are separate future scope. Console and manual paths share the same policy/actions.
-No runtime schemas, 0.1.0-alpha.1 package code/version, published artifact or SDK methods changed.
+That execution-design update added no runtime schemas, published artifact or SDK methods.
 Docs checks/content scan pass; existing source tests/CI are historical and were not rerun for prose.
 
 ## Local/hosted plans, metered AI and paid packages — design only
@@ -98,7 +101,7 @@ filesystem/network/admin capability. Package limits, budget/availability and exp
 need executable public conformance before new SDK shapes. Same author contract should work locally
 and hosted within the assigned workspace and brokered web scope. The public SDK/official open-source
 integrations remain public; independently licensed paid offerings have separate distribution terms.
-No alpha.1 runtime schema/artifact/version, provider or publication changed for this design update.
+The billing design update adds no runtime schema, provider or publication.
 Public docs/content checks pass; existing source CI was not rerun for prose.
 
 ## Next

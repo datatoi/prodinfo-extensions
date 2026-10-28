@@ -23,15 +23,21 @@ checks the digest against retained bytes. Generated schema cannot express all se
 The createArtifact effect denotes creation of managed immutable content. It is not configure,
 canonical Record apply, external delivery or durable job submission. Host/client create support
 does not grant guest output writes; the host may keep create and root administration private.
-The first guest use can be read-only exact-reference access, with output explicitly saved by an
-authorized host after successful computation. Ref grants must be checked again before disclosure.
+The reference host uses read-only exact-reference grants, with output explicitly saved by an
+authorized host after successful computation. Ref grants are checked again before disclosure,
+including after awaited/cached reads. Omitted grants deny access; operator rights do not grant guests
+sibling reads. Root metadata/creation remain outside that guest projection.
 
 resource_limit reports a firm resource bound; unavailable reports a currently unavailable operation
 or workspace policy. In this short-command subset recovery is stop. These categories do not add
 durable credit/approval waits or erase the separately planned soft-credit workflow policy.
 
-Initial conformance: seven public tests plus type/format/build/schema drift pass locally. Host
-namespace/quota/transaction/guest proof and three-platform CI are pending. No raw filesystem API,
+Conformance: seven public tests/type/format/build/schema drift pass locally and in
+[CI](https://github.com/datatoi/prodinfo-extensions/actions/runs/40653044117) at 46d54fc on Windows/
+macOS/Linux. Reference host 2ecd1d4 passes 49 tests/two built smoke paths on all three OS plus
+21 isolated PG18 cases: namespace/quota/transaction/replay and live exact-ref guest denial/revocation.
+Its synthetic unquoted CSV fixture preserves literal IDs/CRLF through a retained routine/config pin,
+reopen, separate managed output and exclusive host-owned export. No raw filesystem API,
 external directory binding, large file/binary streaming, output publication lifecycle, full CSV
 importer or installed/hosted service is claimed. Public tests use only synthetic data and public
 dependencies; no private checkout is needed.

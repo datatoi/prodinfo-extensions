@@ -145,7 +145,8 @@ resource names, bounded relative-member operations and declared output artifacts
 approved locations on the selected execution host. No arbitrary absolute path or process working-
 directory access is implied. Inputs are pinned; outputs are isolated/finalized per run and retries
 must not silently overwrite user files. Remote execution needs remote bindings or explicit transfer,
-not interpretation of a workstation path. Exact resource schema fields follow executable core tests.
+not interpretation of a workstation path. The first logical-root/immutable-text subset is executable
+in [alpha.2 resources](resources.md); broader native/project/run bindings remain draft.
 
 Persistence engine and registry administration are host details. Keep storage types/credentials out
 of the author SDK; identical contracts should work against a local service or shared team workspace.
@@ -178,7 +179,7 @@ separate activation/apply/delivery outcomes do not imply blanket human-only exec
 
 [Routine execution/interaction](routine-execution.md) now elaborates the planned run/step/item/
 attempt model, universal progress, durable input/approval tasks, batch policies and optional
-declarative routine views. These are not supported by 0.1.0-alpha.1's completed-command contract.
+declarative routine views. These are not supported by alpha.2's completed-command/resource contract.
 Exact schemas/SDK methods follow C2 host conformance; no arbitrary guest UI code is implied.
 
 Review-only refinements, not new stable fields or callable methods. Add each conformance group when

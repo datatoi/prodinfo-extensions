@@ -45,7 +45,9 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
   exact outcomes and process-kill recovery. Reference host 11ce201 now adds an opt-in automatic
   dispatcher (85 tests/three smokes on Windows/macOS/Linux plus 48 PG18 cases); this does not expand the
   public artifact. Reference host 6d0212d adds one durable owner-only text checkpoint (96 tests/
-  three smokes on Windows/macOS/Linux plus 56 PG18 cases). Independent two-item batch conformance remains open.
+  three smokes on Windows/macOS/Linux plus 56 PG18 cases). Reference host 11766b9 adds bounded
+  independent item batches and a two-item killed-host/resume proof (107 local tests/three smokes;
+  Windows/macOS/Linux and all 65 PG18 cases pass CI). Broader public author/workflow conformance remains open.
   [Scope](execution-effects.md). No public run state/SDK or general workflow.
 
 - [ ] Implement minimal strict schemas, generated author types and valid/invalid synthetic fixtures.

@@ -119,6 +119,17 @@ Local-only must reach model/runner/log/backup boundaries. This does not add exec
 Reference host 6d0212d now proves one private owner-only text checkpoint, exact-revision answers,
 release of VM/worker/SQL while waiting, and fresh-VM continuation after a real host kill. Local
 96-test/three-built-smoke checks pass; source CI also passes on Windows/macOS/Linux plus all 56 PG18
-cases. This foundation does not
-close the independent two-item batch/partial-result gate above or define stable public task fields.
+cases. That foundation does not define stable public task fields or full workflow conformance.
 One text answer is not browser-session sharing, a credential grant or captured-page disclosure.
+
+## Reference host bounded item-batch proof
+
+Host 11766b9 now composes up to eight pinned item runs atomically, reusing the same worker/input
+checkpoint engine. A real killed-host/restart/answer test resumes only the waiting item and preserves
+the completed item's exact result/attempt count. Counts distinguish completed, failed, waiting and
+other actual item states; stale group cancellation conflicts and terminal outcomes are retained.
+Local checks pass 107 tests/three built smokes. Source CI passes on Windows/macOS/Linux plus all
+65 isolated PG18 cases, including a two-pool/two-dispatcher batch fixture. The private operator catalog now pages within unchanged
+JSON bounds. Public alpha.4 and its artifact are unchanged; host-profile limits and private commands
+are not a released author schema. Dynamic graphs/totals, failed-item subset retry, team/capture forms,
+core attention/outbox, external notifications and UI remain separate acceptance work.

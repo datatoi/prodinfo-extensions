@@ -91,8 +91,21 @@ The declaration/source pins, checkpoint and answer survive host loss; a new VM r
 state with no worker/SQL held while waiting. Revisions/current authority fence answers; deadlines,
 cancellation, bounded per-phase recovery and uncertain acknowledgements retain explicit outcomes.
 Source CI passes 96 tests and three built smokes on Windows/macOS/Linux plus all 56 isolated PG18 cases.
-Independent batch items and the complete two-item conformance gate remain open. This is a private
+That slice preceded the bounded item-batch proof below. The complete public workflow gate remains
+open. This is a private
 experimental host protocol, not a new public alpha.4 schema/SDK, capture task or generic form API.
+
+## Reference host independent item-batch proof
+
+Reference host 11766b9 composes up to eight independent item runs under an immutable atomic manifest.
+Each item uses the existing claims/input tasks/checkpoints; parent progress is derived with real
+counts and state-digest cancellation preserves terminal outcomes. A killed host resumes only the
+waiting item, leaving the completed item's result and attempt count unchanged. Local verification
+passes 107 source tests and three built smokes. Source CI passes on Windows/macOS/Linux plus all
+65 isolated PostgreSQL 18 cases.
+Its growing private operator catalog now pages within the existing JSON limits. Public alpha.4,
+artifact and guest authority remain unchanged. This is bounded host proof, not a released public
+batch schema/SDK, general workflow graph or inbox/event/notification implementation.
 
 ## Notification and attention direction — proposal
 

@@ -38,7 +38,9 @@ Logical roots, digest-bound refs, exact UTF-8 create/read payloads and generated
 public tests. Text caps at 8 KiB; path/identity spoofing, excessive UTF-8, unpaired surrogates and
 byte-count mismatch fail. JSON helpers were split into a dependency module so resource parsers
 share them without a module cycle. Local seven-test/type/build/format/schema drift checks pass.
-Source-platform CI and matching host namespace/quota/guest implementation are pending. No npm
+[Alpha.2 CI](https://github.com/datatoi/prodinfo-extensions/actions/runs/40653044117) passed at
+46d54fc: seven tests/type/build/schema checks on Windows/macOS/Linux. Matching host namespace/quota
+proof is being validated; guest access remains pending. No npm
 publish, guest write privilege, native directory binding or job lifecycle is implied.
 
 ## Ownership and unchanged requirements

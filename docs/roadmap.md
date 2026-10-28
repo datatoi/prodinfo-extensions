@@ -23,7 +23,8 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
 
 - [ ] E1b platform/host acceptance: alpha.2 managed text root/ref/create/read schemas, createArtifact
   effect and resource-limit/unavailable outcomes. Seven local contract tests/type/build/format/schema
-  drift pass; source-platform CI and matching host namespace/quota/guest proof are pending.
+  drift pass; [CI](https://github.com/datatoi/prodinfo-extensions/actions/runs/40653044117) passed at
+  46d54fc on Windows/macOS/Linux. Matching host namespace/quota/guest proof remains pending.
   [Scope](resources.md). No large-file, native path, guest-write or durable-job support is implied.
 
 - [ ] Implement minimal strict schemas, generated author types and valid/invalid synthetic fixtures.

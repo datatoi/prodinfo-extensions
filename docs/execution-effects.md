@@ -40,3 +40,8 @@ or a grant to control work. Historical input notices recheck source resolution; 
 current form/control refs. Source CI passes 124 tests/three smokes on Windows/macOS/Linux plus all
 82 isolated PG18 cases.
 No event/inbox schema, channel adapter or guest subscription capability is added to alpha.4.
+
+Reference host 867fb86 adds revision-checked owner read/unread presentation flags. These updates use
+configure, not controlRun: task resolution, source facts and current answer authority remain separate.
+Source CI passes 131 tests/three smokes on Windows/macOS/Linux plus all 89 isolated PG18 cases.
+Existing page replies stay compatible, and alpha.4 gains no inbox, notification or guest subscription API.

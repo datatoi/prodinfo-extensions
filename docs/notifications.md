@@ -12,8 +12,11 @@ Current audience/source revisions govern every control; a message, manifest or w
 command authority. The reference host now proves private item batches, live owner attention and
 transactional run facts with a bounded durable owner-notice consumer. Its historical notices recheck
 current task resolution; existing waiting work stays discoverable without fabricated event backfill.
-Per-user read state, aggregate batch notices, team audiences, external-delivery conformance and all
-public event/inbox schemas remain open. Alpha.4 and guest authority are unchanged.
+The reference host also proves explicit owner read/unread flags with revision/current-authority
+checks and restart/replay preservation, independently of task resolution. Existing page contracts
+stay compatible. Unread paging/counts, bulk marking, snooze/archive, aggregate batch notices, team
+audiences, external delivery and all public event/inbox schemas remain open. Alpha.4 and guest
+authority are unchanged.
 
 Public channel packages own provider-specific declarations/formatting and synthetic adapter tests.
 Use scoped host transport/secret brokers: webhook URLs and mail keys never enter routine arguments,

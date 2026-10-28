@@ -53,7 +53,10 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
   attention SDK. Reference host 32bb001 now adds transactional run facts and a durable owner inbox
   consumer (124 tests/three smokes on Windows/macOS/Linux plus all 82 PG18 cases pass CI), with process-kill
   recovery and no invented historical-event backfill. Public event/inbox schemas and external
-  delivery remain open; alpha.4 is unchanged.
+  delivery remain open; alpha.4 is unchanged. Reference host 867fb86 adds owner read/unread flags
+  with revision/current-authority checks and compatible old page receipts (131 tests/three smokes
+  on Windows/macOS/Linux plus all 89 PG18 cases pass CI). Read flags do not resolve work; unread paging,
+  snooze/archive, team audiences and delivery remain open.
   [Scope](execution-effects.md). No public run state/SDK or general workflow.
 
 - [ ] Implement minimal strict schemas, generated author types and valid/invalid synthetic fixtures.

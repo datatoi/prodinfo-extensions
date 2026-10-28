@@ -127,9 +127,20 @@ checkpoint survives restart and concurrent consumers; historical attention notic
 task resolution without answering it. Source CI passes 124 tests/three built smokes on
 Windows/macOS/Linux plus all 82 isolated PG18 cases. A killed host retains notices and resumes only its waiting batch item.
 Schema migration preserves prior work/receipts without fabricating old notification events; live
-attention still discovers old waiting work. Read state, aggregate batch notices, team audiences,
-external delivery, UI and broader tracing remain open. Alpha.4/artifact and guest grants are unchanged.
+attention still discovers old waiting work. Read flags follow in the proof below; aggregate batch
+notices, team audiences, external delivery, UI and broader tracing remain open. Alpha.4/artifact and guest grants are unchanged.
 No public event/inbox SDK, package publication or provider send is added.
+
+## Reference host owner read-state proof
+
+Reference host 867fb86 adds explicit owner read/unread flags with revision-checked updates, current
+authority and bounded flag queries for visible notice IDs. Read marks do not resolve tasks, move the
+event cursor or repeat run facts. Consumer replay/new outcomes, process loss and migration preserve
+the distinction between presentation state and work. Existing inbox page contracts/receipts remain
+compatible. Source CI passes 131 tests/three built smokes on Windows/macOS/Linux plus all 89
+isolated PG18 cases.
+Unread paging/counts, bulk changes, snooze/archive, team audiences, projection rebuild and delivery
+remain open. Alpha.4/artifact and guest grants are unchanged; no public inbox API or provider is added.
 
 ## Notification and attention direction — proposal
 

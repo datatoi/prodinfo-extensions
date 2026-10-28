@@ -9,8 +9,8 @@ transactional outbox and channel delivery receipts. Opening/dismissing a notice 
 input task or approves work. Required attention remains discoverable when external sending fails
 or exceeds a plan allowance. Completion summaries distinguish partial outcomes from full success.
 Current audience/source revisions govern every control; a message, manifest or webhook grants no
-command authority. Bounded private item batches are now proven, while inbox/outbox and notification
-conformance remain open.
+command authority. Bounded private item batches and owner open-input discovery are now proven;
+per-user inbox state, outbox and notification conformance remain open.
 
 Public channel packages own provider-specific declarations/formatting and synthetic adapter tests.
 Use scoped host transport/secret brokers: webhook URLs and mail keys never enter routine arguments,

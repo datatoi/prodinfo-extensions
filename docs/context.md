@@ -107,6 +107,17 @@ Its growing private operator catalog now pages within the existing JSON limits. 
 artifact and guest authority remain unchanged. This is bounded host proof, not a released public
 batch schema/SDK, general workflow graph or inbox/event/notification implementation.
 
+## Reference host owner attention proof
+
+Reference host dfa46a7 adds a bounded owner/workspace/config input-task query over existing run/batch
+facts. Live deadline cursors carry exact task/run revisions and item refs; current advisory answer
+status is separate from commercial execution availability. Discovery does not answer/dismiss work
+or disclose input/checkpoint/answer/result bodies. Local checks pass 114 tests and three built
+smokes. Source CI passes on Windows/macOS/Linux plus all 72 isolated PG18 cases. The index-only
+schema migration preserves
+source facts/receipts. The private paged catalog has 34 operations; alpha.4/artifact and guest grants
+are unchanged. Read state, outbox, external notifications and UI remain unimplemented.
+
 ## Notification and attention direction — proposal
 
 [Notification design](notifications.md) adds configurable Discord and future platform EmailService

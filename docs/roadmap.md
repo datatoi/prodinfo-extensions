@@ -47,7 +47,10 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
   public artifact. Reference host 6d0212d adds one durable owner-only text checkpoint (96 tests/
   three smokes on Windows/macOS/Linux plus 56 PG18 cases). Reference host 11766b9 adds bounded
   independent item batches and a two-item killed-host/resume proof (107 local tests/three smokes;
-  Windows/macOS/Linux and all 65 PG18 cases pass CI). Broader public author/workflow conformance remains open.
+  Windows/macOS/Linux and all 65 PG18 cases pass CI). Broader public author/workflow conformance remains open. Reference host dfa46a7 adds owner
+  attention discovery with live scoped cursors and advisory controls (114 local tests/three smokes;
+  Windows/macOS/Linux and all 72 PG18 cases pass CI). This is private operator proof, not a public
+  attention SDK.
   [Scope](execution-effects.md). No public run state/SDK or general workflow.
 
 - [ ] Implement minimal strict schemas, generated author types and valid/invalid synthetic fixtures.

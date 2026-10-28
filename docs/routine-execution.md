@@ -133,3 +133,15 @@ Local checks pass 107 tests/three built smokes. Source CI passes on Windows/macO
 JSON bounds. Public alpha.4 and its artifact are unchanged; host-profile limits and private commands
 are not a released author schema. Dynamic graphs/totals, failed-item subset retry, team/capture forms,
 core attention/outbox, external notifications and UI remain separate acceptance work.
+
+## Reference host owner attention query
+
+Host dfa46a7 adds owner/workspace/config-scoped discovery of open input tasks across standalone and
+batch runs. Live deadline cursors and exact task/run/item refs feed existing answer operations;
+advisory availability is not a grant. New request IDs refresh state; repeated read IDs replay their
+historical page. Querying does not resolve/dismiss/expire tasks or bypass current action checks.
+Local 114-test/three-smoke proof passes, including HTTP discovery after killed-host recovery and
+schema-8 reopen/receipt/cursor preservation. Source CI passes on Windows/macOS/Linux plus all 72
+isolated PG18 cases. This adds no public
+alpha.4 types or guest permissions. Team forms, completion notices, read state, outbox, delivery and
+UI remain separate acceptance work.

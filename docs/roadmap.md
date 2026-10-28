@@ -39,6 +39,10 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
   interval missed/overlap rules, event replay/quarantine and broker-side effect crash windows.
 - [ ] Test project/routine resource bindings, input pins, output/scratch scope and immutable team-
   registry sources through the same contract; no engine-specific DB or private-source dependency.
+- [ ] Local/hosted workspace and commercial-availability conformance: tenant-bound resources,
+  cached policy/expiry and paid-package denial without authority expansion. Add bounded model-call
+  reservation/usage/settlement refs and budget/uncertain-usage outcomes only with host proof; no
+  guest-provided charges or plan/credit self-allocation. Keep platform billing/provisioning private.
 - [ ] Host-stamped operation/run/attempt/step/part trace context, structured diagnostic schemas and
   logger/query conformance: forged identity, overflow/suppression, secret masking and event separation.
   [Telemetry proposal](telemetry-draft.md) remains review-only until executable schemas exist.

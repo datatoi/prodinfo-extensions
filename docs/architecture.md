@@ -91,3 +91,18 @@ delegate configure/launch/inspect/correct/relaunch across a workspace/project/ta
 entry/authority changes remain protected. Guest packages receive only their effective narrower
 capabilities. See [contract draft](contract-draft.md); the experimental operation schema currently
 implements only a delegability flag, not the complete automation/availability/recovery contract.
+
+## Local/hosted workspaces and paid availability
+
+One public author contract should work against a local, customer-server or hosted workspace. The
+host derives workspace/actor/package/config/run identity; callers cannot select another tenant's
+DB/files/context or interpret arbitrary absolute paths. Hosted shared AI does not share prompts,
+context or credentials across tenants. Model calls request bounded resources through the host and
+its metered gateway; no guest-supplied token count can create a charge or enlarge a budget.
+
+Free/open-source, paid and certified packages use the same capability and sandbox rules. Commercial
+availability, download/update rights and runtime activation/grants are separate; purchase never
+auto-activates a version. Expired/insufficient budget outcomes need explicit availability/recovery
+semantics when the corresponding public schema becomes executable. No plan/payment/backup API is
+part of alpha.1. Subscription provisioning and accounting implementation stay with the platform,
+not in uploaded packages or a required private build dependency.

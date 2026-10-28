@@ -1,6 +1,6 @@
 # Extensions current context
 
-Updated: 2026-10-27. Single starting handoff; [roadmap](roadmap.md) is the sole task checklist.
+Updated: 2026-10-28. Single starting handoff; [roadmap](roadmap.md) is the sole task checklist.
 
 ## Implemented first slice
 
@@ -64,6 +64,23 @@ forms/actions extend a routine home page; uploaded React/JS is excluded from tru
 executable views are separate future scope. Console and manual paths share the same policy/actions.
 No runtime schemas, 0.1.0-alpha.1 package code/version, published artifact or SDK methods changed.
 Docs checks/content scan pass; existing source tests/CI are historical and were not rerun for prose.
+
+## Local/hosted plans, metered AI and paid packages — design only
+
+The host direction now includes BE-provisioned subscriptions/installations/domains, isolated hosted
+workspace DB/files/context/executors, shared hosted AI and optional setup/context backup images.
+Local rights refresh at activation/restart and plan expiry and are checked from cache on task
+admission; no external entitlement check per task. Hosted AI calls use an account/gateway for credit
+reservations and trusted token-based settlement, including console, enrichment and child routines.
+Token usage and credit charges differ; rates/grants and financial precision belong to the platform.
+
+These are host/platform responsibilities. A package purchase/free status/certification grants no
+filesystem/network/admin capability. Package limits, budget/availability and expired-rights outcomes
+need executable public conformance before new SDK shapes. Same author contract should work locally
+and hosted within the assigned workspace and brokered web scope. The public SDK/official open-source
+integrations remain public; independently licensed paid offerings have separate distribution terms.
+No alpha.1 runtime schema/artifact/version, provider or publication changed for this design update.
+Public docs/content checks pass; existing source CI was not rerun for prose.
 
 ## Next
 

@@ -67,7 +67,12 @@ configure and createArtifact. The completed reply envelope is unchanged: queued-
 be result data, not final run completion; no top-level accepted/job variant or public run projection
 is added. Thirteen local public tests/type/build/schema drift pass.
 [CI](https://github.com/datatoi/prodinfo-extensions/actions/runs/40665029899) passed at 18c1b14 on
-Windows/macOS/Linux; matching host proof is pending. All actual authority/lease/cancellation checks remain host responsibilities.
+Windows/macOS/Linux. Reference host 6f16218 passes 77 tests and three built smokes on all three OS
+plus 41 isolated PG18 cases: durable one-step admission, current activation/input pins, exclusive
+leases/capacity, takeover, broker/cache/post-flush fencing, cancel/checkpoint races and process-kill
+recovery. A worker handoff race found in initial CI has deterministic regression coverage.
+Run state/claims stay private; no automatic dispatcher, public run SDK or general workflow is added.
+All actual authority/lease/cancellation checks remain host responsibilities.
 
 ## Ownership and unchanged requirements
 

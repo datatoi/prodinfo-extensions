@@ -37,10 +37,12 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
   current policy/actor denial, corruption/rollback and migration/reopen. Execution admission is later.
   [Scope](configuration.md). No secret handling, executable hook, GUI or durable submission API.
 
-- [ ] E1d execution-effect acceptance: alpha.4 submit/controlRun metadata with unchanged completed
+- [x] E1d execution-effect acceptance: alpha.4 submit/controlRun metadata with unchanged completed
   reply envelope, thirteen local tests/type/build/format/schema drift.
   [CI](https://github.com/datatoi/prodinfo-extensions/actions/runs/40665029899) passed at 18c1b14 on
-  Windows/macOS/Linux; durable host admission/fencing proof is pending. [Scope](execution-effects.md). No public run state/SDK.
+  Windows/macOS/Linux. Reference host 6f16218 passes 77 tests/three built smokes on all three OS plus
+  41 PG18 cases: durable admission/leases/capacity, broker/checkpoint fencing, cancellation, takeover,
+  exact outcomes and process-kill recovery. No automatic dispatcher or general workflow is delivered. [Scope](execution-effects.md). No public run state/SDK.
 
 - [ ] Implement minimal strict schemas, generated author types and valid/invalid synthetic fixtures.
   Separate core metadata/public guest projection from private administration; do not publish a

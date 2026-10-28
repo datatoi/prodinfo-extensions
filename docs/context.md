@@ -94,6 +94,18 @@ Source CI passes 96 tests and three built smokes on Windows/macOS/Linux plus all
 Independent batch items and the complete two-item conformance gate remain open. This is a private
 experimental host protocol, not a new public alpha.4 schema/SDK, capture task or generic form API.
 
+## Notification and attention direction — proposal
+
+[Notification design](notifications.md) adds configurable Discord and future platform EmailService
+adapters over durable core inbox/task/outbox facts. Keep read/dismiss separate from resolving work,
+scoped UI intents separate from command grants, and provider acceptance separate from actual receipt.
+Plan-backed outgoing allowance must preserve unresolved attention. Confirmed: inbox/manual task
+responses are on every plan; admins configure separate channel-type/placement policies and
+allowances, including optional Free/local Discord. This supersedes blanket paid-only messaging.
+Email/SMS/future channels have their own meters; numeric values remain undecided.
+Mobile push/control stays later. No alpha.4 artifact, provider code or runtime schema changes.
+This docs-only section passes format/link/checklist/disclosure checks; source tests were not rerun.
+
 ## Accepted capture direction — design only
 
 [Capture proposal](browser-capture.md) records start/mid-run durable operator capture tasks and

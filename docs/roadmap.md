@@ -78,6 +78,13 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
   logger/query conformance: forged identity, overflow/suppression, secret masking and event separation.
   [Telemetry proposal](telemetry-draft.md) remains review-only until executable schemas exist.
 
+- [ ] Notification channel/config/delivery conformance after host attention/outbox proof: Discord
+  first, then versioned platform EmailService relay. Test denied audience/disclosure, logical-delivery
+  versus retry quotas, independent email/SMS/Discord/future channel meters and placement policies
+  (including allowed Free/local Discord), crash/uncertain sends, stale controls and failure without
+  loss of core tasks.
+  [Proposal](notifications.md). Keep host secrets/plan authority private; no speculative SDK fields.
+
 ## E2 — destination interface proof after core acceptance
 
 - [ ] Write a detailed first adapter plan against the tested core. Start with generic Standard API

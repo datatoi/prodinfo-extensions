@@ -27,7 +27,8 @@
       "type": "string",
       "enum": [
         "read",
-        "configure"
+        "configure",
+        "createArtifact"
       ]
     },
     "requiredCapabilities": {

@@ -55,7 +55,9 @@
             "unsupported_version",
             "forbidden",
             "conflict",
-            "internal_error"
+            "internal_error",
+            "resource_limit",
+            "unavailable"
           ]
         },
         "message": {

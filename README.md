@@ -5,7 +5,7 @@ connectors. Build configurable integrations and workflows against a documented h
 The Workbench application is private; extension development must not require its source.
 
 **Status:** first experimental command contract implemented, 27 October 2026.
-[@prodinfo/extension-contracts](packages/contracts/README.md) `0.1.0-alpha.1` has strict schemas,
+[@prodinfo/extension-contracts](packages/contracts/README.md) `0.1.0-alpha.2` has strict schemas,
 generated types/JSON Schema and synthetic tests. No stable SDK, connector or npm release yet.
 
 For development: Node 24.x, `pnpm install --frozen-lockfile --ignore-scripts`, then `pnpm check`.
@@ -50,3 +50,6 @@ are separate processes; no commercial distribution service is implemented by thi
 New original repository content is [MIT licensed](LICENSE). Reused third-party material retains its
 own license/NOTICE obligations and must be reviewed before import. No customer data or private host
 source is included.
+
+[Alpha.2 managed text resources](docs/resources.md) add logical roots and exact text refs; no raw
+filesystem/guest-write or durable-job capability is implied.

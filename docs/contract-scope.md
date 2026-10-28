@@ -2,7 +2,7 @@
 
 This public repository is the canonical owner of the new extension-facing contract and author SDK.
 The private host implements it and consumes pinned artifacts. The first experimental
-[command subset](../packages/contracts/README.md) is executable at 0.1.0-alpha.1, not npm-published
+[command subset](../packages/contracts/README.md) is executable at 0.1.0-alpha.2, not npm-published
 or stable. This document defines scope; the [contract draft](contract-draft.md) proposes broader
 shapes. They are not stable JSON fields or callable commands until executable schemas/conformance.
 
@@ -47,3 +47,6 @@ source or imply every old integration has already migrated.
 Public source is distinct from a released SDK, marketplace listing/certification and host activation.
 Package definitions may be shared without operational configurations, private data, history or
 execution grants. A connector fix should not require changing unrelated package/contract versions.
+
+[Alpha.2 resources](resources.md) add a minimal managed-text subset, not the full draft resource/
+package/workflow contract. Current executable source remains canonical.

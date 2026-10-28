@@ -5,10 +5,12 @@ Updated: 2026-10-28. Single starting handoff; [roadmap](roadmap.md) is the sole 
 ## Implemented first slice
 
 Public datatoi/prodinfo-extensions now contains the experimental source package
-`@prodinfo/extension-contracts` version `0.1.0-alpha.1` in [packages/contracts](../packages/contracts/README.md).
+`@prodinfo/extension-contracts` version `0.1.0-alpha.2` in [packages/contracts](../packages/contracts/README.md).
 It provides strict operation/invocation/result/error schemas, inferred TypeScript declarations,
 generated JSON Schema, bounded JSON validation/canonicalization and synthetic fixtures/tests.
-Only `read`/`configure` operations and completed results/errors are executable in this subset.
+Read/configure/createArtifact operations and completed results/errors are executable. Alpha.2
+adds [managed text resource schemas](resources.md), exact refs and resource_limit/unavailable
+outcomes. Root administration/host authority and namespace checks remain host responsibilities.
 No package-registry publication, stable SDK/manifest, guest runner, jobs/events/telemetry API,
 connector or live-provider compatibility is delivered. Broader [contract draft](contract-draft.md)
 remains a proposal; executable source is canonical for the implemented subset.
@@ -22,13 +24,22 @@ Packing/source commits do not publish to npm, certify a marketplace package or a
 
 Node 24.x (local verification 24.1.0), pnpm 11.0.8, TypeScript 7.0.2, Zod 4.6.7 and Biome 2.6.2
 are pinned. `pnpm install --frozen-lockfile --ignore-scripts`; `pnpm check` runs formatting,
-typechecks, four contract tests, declaration/JS build and generated-schema drift checks.
+typechecks, seven contract tests, declaration/JS build and generated-schema drift checks.
 `pnpm generate` deliberately updates JSON Schema from source. GitHub checks are configured for
 Linux/macOS/Windows with public dependencies only. Source
 [CI](https://github.com/datatoi/prodinfo-extensions/actions/runs/40581754727) passed at 746775a
 after enforcing LF text checkout; no contract runtime change was needed. Local checks passed on
 macOS; Node emits its type-stripping experimental warning. No Windows/Linux
 installer, real provider, complete SDK or normal PostgreSQL compatibility has been accepted.
+
+## Alpha.2 resource contract section
+
+Logical roots, digest-bound refs, exact UTF-8 create/read payloads and generated schemas now have
+public tests. Text caps at 8 KiB; path/identity spoofing, excessive UTF-8, unpaired surrogates and
+byte-count mismatch fail. JSON helpers were split into a dependency module so resource parsers
+share them without a module cycle. Local seven-test/type/build/format/schema drift checks pass.
+Source-platform CI and matching host namespace/quota/guest implementation are pending. No npm
+publish, guest write privilege, native directory binding or job lifecycle is implied.
 
 ## Ownership and unchanged requirements
 

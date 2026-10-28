@@ -21,6 +21,11 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
   typecheck/build/schema drift checks; public-only Windows/macOS/Linux source CI passed at 746775a.
   The private host consumes a packed pinned artifact and exercises this subset; E1 stays open below.
 
+- [ ] E1b platform/host acceptance: alpha.2 managed text root/ref/create/read schemas, createArtifact
+  effect and resource-limit/unavailable outcomes. Seven local contract tests/type/build/format/schema
+  drift pass; source-platform CI and matching host namespace/quota/guest proof are pending.
+  [Scope](resources.md). No large-file, native path, guest-write or durable-job support is implied.
+
 - [ ] Implement minimal strict schemas, generated author types and valid/invalid synthetic fixtures.
   Separate core metadata/public guest projection from private administration; do not publish a
   speculative complete SDK before the operations exist.

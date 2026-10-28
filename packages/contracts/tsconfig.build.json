@@ -4,8 +4,9 @@
     "rootDir": "src",
     "outDir": "dist",
     "declaration": true,
-    "allowImportingTsExtensions": false,
-    "noEmit": false
+    "allowImportingTsExtensions": true,
+    "noEmit": false,
+    "rewriteRelativeImportExtensions": true
   },
   "include": ["src/**/*.ts"]
 }

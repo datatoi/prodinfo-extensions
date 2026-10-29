@@ -1,6 +1,10 @@
 import { readFile, mkdir, writeFile } from "node:fs/promises";
 import { z } from "zod";
 import {
+  ManagedFileSchema,
+  FileCallSchema,
+  FilePageSchema,
+  FileAckSchema,
   OperationSchema,
   InvocationSchema,
   ReplySchema,
@@ -15,6 +19,10 @@ import {
 const root = new URL("../schemas/", import.meta.url);
 await mkdir(root, { recursive: true });
 for (const [name, schema] of Object.entries({
+  "managed-file": ManagedFileSchema,
+  "file-call": FileCallSchema,
+  "file-page": FilePageSchema,
+  "file-ack": FileAckSchema,
   operation: OperationSchema,
   invocation: InvocationSchema,
   reply: ReplySchema,

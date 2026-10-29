@@ -41,3 +41,5 @@ Alpha.4 adds submit/controlRun operation effects. A command result describing qu
 not a completed run. The reply envelope is unchanged; top-level accepted/job variants remain
 unsupported. See [execution effects](../../docs/execution-effects.md). Host authority and durable
 claim/result fencing are mandatory; these metadata labels grant no guest execution privilege.
+
+Alpha.5 adds the experimental [bounded routine file facade](../../docs/files.md); grants and atomic output publication remain host responsibilities. Existing 8 KiB text-resource schemas are unchanged.

@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const CONTRACT_VERSION = "0.1.0-alpha.4";
+export const CONTRACT_VERSION = "0.1.0-alpha.5";
 import { assertBoundedJson } from "./json.ts";
 export { LIMITS, assertBoundedJson, canonicalJson, type Json } from "./json.ts";
 
@@ -108,3 +108,20 @@ export {
   type ConfigurationContract,
   type ConfigurationResult,
 } from "./configuration.ts";
+
+export {
+  FILE_LIMITS,
+  FileMediaSchema,
+  FileChunkSchema,
+  ManagedFileSchema,
+  FileReadSchema,
+  FilePageSchema,
+  FileWriteSchema,
+  FileAckSchema,
+  FileCallSchema,
+  parseFileCall,
+  fileTextPage,
+  type ManagedFile,
+  type FileCall,
+  type RoutineFiles,
+} from "./files.ts";

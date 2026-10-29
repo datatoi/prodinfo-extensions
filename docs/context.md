@@ -1,11 +1,19 @@
 # Extensions current context
 
-Updated: 2026-10-28. Single starting handoff; [roadmap](roadmap.md) is the sole task checklist.
+Updated: 2026-10-29. Single starting handoff; [roadmap](roadmap.md) is the sole task checklist.
+
+## Current file-facade section
+
+Alpha.5 adds [bounded routine text-file schemas/facade types](files.md): exact input metadata,
+Unicode-preserving pages and one staged output stream. Public framing tests are synthetic; the
+host owns all grants, quota, cancellation and atomic publication. Existing text/config/command
+shapes remain unchanged. Source/packed artifacts are not npm publication or installed-host
+acceptance. No private host source, customer fixture or native-path capability was added.
 
 ## Implemented first slice
 
 Public datatoi/prodinfo-extensions now contains the experimental source package
-`@prodinfo/extension-contracts` version `0.1.0-alpha.4` in [packages/contracts](../packages/contracts/README.md).
+`@prodinfo/extension-contracts` version `0.1.0-alpha.5` in [packages/contracts](../packages/contracts/README.md).
 It provides strict operation/invocation/result/error schemas, inferred TypeScript declarations,
 generated JSON Schema, bounded JSON validation/canonicalization and synthetic fixtures/tests.
 Read/configure/createArtifact operations and completed results/errors are executable. Alpha.2

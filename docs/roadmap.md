@@ -16,6 +16,11 @@ host proves the boundary; detailed connector/action GUI plans follow core accept
 
 ## E1 — executable contract and core conformance
 
+- [x] Alpha.5 bounded text-file facade source: exact selected input metadata, Unicode-safe pages,
+  one staged output stream and schema/framing checks. [Scope](files.md). Host grants, quota,
+  atomic checkpoint publication and runtime acceptance are separate; no registry publication.
+
+
 - [x] E1a: original read/configure operation + invocation/completed-result/error schemas, bounded
   JSON, generated declarations/JSON Schema and synthetic valid/forged fixtures. Four local tests,
   typecheck/build/schema drift checks; public-only Windows/macOS/Linux source CI passed at 746775a.
